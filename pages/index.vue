@@ -11,17 +11,21 @@
 </template>
 
 <script setup lang="ts">
+/*
 
 import {useUsers} from '@/store/getUsers'
+*/
 
 
 const { logout } = new useAuth()
 
+/*
 const { update: updateUser, get: getUser } = new useUser()
+*/
 
 
 
-console.log(useUsers().getUsers())
+/*console.log(useUsers().getUsers())*/
 
 const user: any = useState("user")
 
