@@ -10,9 +10,8 @@
 </template>
 
 <script setup lang="ts">
+import { useUserStore } from "~/store/userStore";
 
-import Login from "~/pages/login.vue";
-import Register from "~/pages/register.vue";
-
-const { logout } = new useAuth()
+const user = useUserStore()
+await user.getUser()
 </script>

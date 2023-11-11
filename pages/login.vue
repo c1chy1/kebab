@@ -8,7 +8,7 @@
     <div
         class="login-form-wrapper w-full max-w-[500px] border rounded-md max-sm:rounded-none max-sm:border-l-0 max-sm:border-r-0 max-sm:border-t max-sm:border-b border-white/10 p-8 flex flex-col justify-center items-center bg-[#1c1c1c]">
       <form class="login-form flex flex-col w-full justify-center max-w-[384px] items-center gap-y-4"
-            @submit.prevent="loginEmailPassword(email, password)">
+            @submit.prevent="login(email, password)">
         <div class="form-message flex justify-start items-start flex-col gap-y-2 mb-6 w-full">
           <h1 class="main-message text-3xl font-semibold">Welcome back</h1>
           <p class="sub-message text-[#bbb] text-sm font-semibold">
@@ -21,10 +21,10 @@
           </NuxtLink>
         </div>
 
-        <input name="email" id="email" placeholder="John@example.com" type="text" label="Email"
+        <input class="text-black" name="email" id="email" placeholder="John@example.com" type="text" label="Email"
                v-model="email" />
 
-        <input name="password" id="password" placeholder="********" type="password" label="Password"
+        <input class="text-black" name="password" id="password" placeholder="********" type="password" label="Password"
                v-model="password" />
 
         <div class="w-full flex flex-col gap-y-2">
@@ -65,9 +65,19 @@ const email = ref("");
 const password = ref("");
 
 
+import {useUserStore} from "~/store/userStore";
+
+const store = useUserStore()
+
+function login(email : string, password : string) {
+
+  store.login(email,password)
 
 
-const { loginEmailPassword, loginGoogle } = new useAuth()
+
+}
+
+
 
 definePageMeta({
   layout: "empty"

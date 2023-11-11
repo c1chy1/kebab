@@ -4,10 +4,9 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-    modules: [
-      'nuxt-security',
-       '@pinia/nuxt'
-    ],
+    modules: ['nuxt-security', ['@pinia/nuxt', {
+      autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
+    }], '@nuxtjs/tailwindcss', '@formkit/nuxt', "@nuxt/image"],
 
   routeRules: {
     '/api/**': { cors: true },
@@ -50,7 +49,7 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: [
-      'composables/**'
+        'stores','helper'
     ]
   },
   runtimeConfig: {
