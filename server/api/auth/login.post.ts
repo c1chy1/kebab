@@ -15,11 +15,7 @@ export default defineEventHandler(async (event) => {
             { email: userData.email },
         )
 
-
-
-
         const token = await user!.generateAuthToken()
-        // 回傳該用戶資訊及 JWT
         setCookie(event, 'token', token)
         return {
             success: true,

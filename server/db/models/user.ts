@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 const UserSchema = new mongoose.Schema({
         username: {
             type: String,
-            required: true,
+            required: false,
         },
         email: {
             type: String,
@@ -38,6 +38,7 @@ const UserSchema = new mongoose.Schema({
                 // 根據 account 至資料庫找尋該用戶資料
                 const user = await User.findOne({ email })
                 // 沒找到該用戶時，丟出錯誤訊息
+
                 if (!user)
                     throw new Error('Account not found!')
                 // 透過 bcrypt 驗證密碼
@@ -56,7 +57,8 @@ const UserSchema = new mongoose.Schema({
             async findByEmail(email: string): Promise<any> {
                 const user = await User.findOne({ email })
                 if (user)
-                    throw new Error('Account Exist!')
+                  return  new Error('Account Exist!')
+
             },
         },
 

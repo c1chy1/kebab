@@ -1,25 +1,13 @@
 
+import type {logInReq,signUpReq,logoutReq, getUserRes} from '~/types/user'
 
-type logInReq = Pick<signUpReq, 'password'>
-interface signUpReq{
-    username: string,
-    email: string,
-    password: string
-}
 
-interface logoutReq{
-    token: string
-}
+import {toast} from 'vue3-toastify'
 
-interface getUserRes{
-    success: boolean,
-    message: {
-        user: Pick<signUpReq, 'username'>
-    }
-}
+
+
 
 const useApi = async function (url: string, body: Record<string, any> = {}): Promise<any> {
-    const { $toast } = useNuxtApp()
     const origin = useRequestURL().origin
 
     return useFetch(url, {
@@ -38,7 +26,7 @@ const useApi = async function (url: string, body: Record<string, any> = {}): Pro
             const error = res.error.value
             if (data) {
                 if (data.error)
-                    $toast.error(data.error.message)
+                    toast.error(data.error.message)
 
                 return data
             }
@@ -51,19 +39,19 @@ const useApi = async function (url: string, body: Record<string, any> = {}): Pro
 // Log In & Sign Up & Log out
 
 
-export async function login(query: logInReq) {
-    return await useApi('/auth/login', query)
+export async function login(body: logInReq) {
+    return await useApi('/auth/login', body)
 }
 
-export async function register(query: signUpReq) {
+export async function register(body :any) {
 
-    console.log(query)
+    console.log(body)
 
-    return await useApi('/auth/register', query)
+    return await useApi('/auth/register', body)
 }
 
-export async function logOutUser(query: logoutReq) {
-    return await useApi('/auth/logout', query)
+export async function logOutUser(body: logoutReq) {
+    return await useApi('/auth/logout', body)
 }
 
 export async function getUser(): Promise<getUserRes> {

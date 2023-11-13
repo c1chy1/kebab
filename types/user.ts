@@ -5,43 +5,27 @@ export interface User {
 
 }
 
-export interface UserSchema {
-    uuid: number
-    firstName: string
-    lastName: string
-    email: string
-    password: string
-    verified: boolean
-    verificationCode: string | undefined
-    verificationCodeExpAt: Date | undefined
-    resetPassword: string | undefined
-    resetPasswordExpAt: Date | undefined
-}
+
 export interface UserRequestBody {
     username: string
     email: string
     password: string
 }
-export interface SignInRequestBody {
-    email: string
-    password: string
-}
-export interface VerifyUserPayload {
-    uuid: number
-    code: number
+export interface signUpReq {
+    email: string,
+    password: string,
+/*    username?: string*/
 }
 
-export interface ReverifyUserPayload {
-    uuid: number
+export interface getUserRes{
+    success: boolean,
+    message: {
+        user: Pick<signUpReq, 'email'>
+    }
 }
 
-export interface UserData {
-    uuid: number
-    firstName: string
-    lastName: string
-    email: string
-    verified: true
-    createdAt: Date
-    updatedAt: Date
+export type logInReq = Pick<signUpReq, 'email' | 'password'>
+
+export interface logoutReq{
+    token: string
 }
-export type UserWithoutPassword = Omit<User, 'password'>
