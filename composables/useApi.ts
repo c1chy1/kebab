@@ -1,6 +1,6 @@
 
 
-
+type logInReq = Pick<signUpReq, 'password'>
 interface signUpReq{
     username: string,
     email: string,
@@ -49,6 +49,11 @@ const useApi = async function (url: string, body: Record<string, any> = {}): Pro
 }
 
 // Log In & Sign Up & Log out
+
+
+export async function login(query: logInReq) {
+    return await useApi('/auth/login', query)
+}
 
 export async function register(query: signUpReq) {
 

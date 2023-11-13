@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     const path = getRequestPath(event)
     const isAuthPath = path.includes('account')
         ||
-        path.includes('logOut')
+        path.includes('logout')
 
 
     if (!isAuthPath)

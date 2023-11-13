@@ -27,6 +27,17 @@ export default defineEventHandler(async (event) => {
         const user = await User.create(body)
         const token = await user.generateAuthToken()
 
+
+        const userData = await User.findByEmail(body.email)
+
+        const userEmail = await User.findOne(
+            { email: userData.email },
+        )
+
+        console.log(userData + "userData")
+        console.log(userEmail + "userData")
+
+
         return {
             success: true,
             message: {
@@ -35,18 +46,15 @@ export default defineEventHandler(async (event) => {
             },
         }
     }
-
     catch (err: any) {
-        console.error(err)
-        if (err instanceof MongooseError)
-            err.message = 'Account already exists! Please change.'
-
+        console.error(err.message)
         return {
             success: false,
             error: {
-                code: 1002,
+                code: 1001,
                 message: err.message,
             },
         }
     }
+
 })

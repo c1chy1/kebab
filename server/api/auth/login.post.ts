@@ -1,35 +1,42 @@
-/*import { SignInRequestBody } from '../../../types/user'*/
-import bcrypt from "bcrypt";
+
 import User from "~/server/db/models/user"
-import jwt from 'jsonwebtoken';
-import checkError from "~/utils/checkError";
-import type {SignInRequestBody} from "~/types/user"
-import signToken from "~/utils/signToken";
-const config = useRuntimeConfig();
+
+
 export default defineEventHandler(async (event) => {
-    const body = await readBody(event);
+    try {
+        const body = await readBody(event)
 
-    const userExist: any = await User.findOne({
-        $or: [{ username: body.username }, { email: body.username }],
-    });
+        console.log(body)
 
-    if(userExist === null) {
-        return { error: true, message: "User does not exist"};
-    } else {
-        const passwordMatch = await bcrypt.compare(body.password, userExist?.password);
+        const userData = await User.findByCredentials(body.email, body.password)
 
-        if (passwordMatch) {
-            const token = jwt.sign({ id: userExist._id }, config.jwtSecret, {
-                expiresIn: 43200, // 24 hours
-            });
-            setCookie(event, "altine", token);
-            useStorage().setItem("user", userExist._id);
+        console.log(userData + "true")
+        const user = await User.findOne(
+            { email: userData.email },
+        )
 
 
-            return { error: false, message: "Nice", name: userExist.username, email: userExist.email };
-        } else {
-            console.log("Wrong Password! 🤬");
-            return { error: true, message: "Wrong Password" };
+
+
+        const token = await user!.generateAuthToken()
+        // 回傳該用戶資訊及 JWT
+        setCookie(event, 'token', token)
+        return {
+            success: true,
+            message: {
+                user,
+                token,
+            },
+        }
+    }
+    catch (err: any) {
+        console.error(err.message)
+        return {
+            success: false,
+            error: {
+                code: 1001,
+                message: err.message,
+            },
         }
     }
 })

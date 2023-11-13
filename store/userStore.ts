@@ -2,6 +2,10 @@ import { defineStore } from "pinia"
 import { register , logOutUser } from "~/composables/useApi";
 import type {UserRequestBody} from "~/types/user";
 import checkError from "~/utils/checkError";
+
+
+type logInReq = Pick<signUpReq, 'password'>
+
 interface signUpReq{
     username: string,
     email: string,
@@ -17,6 +21,19 @@ export const useUserStore = defineStore('User', {
     },
     getters: {},
     actions: {
+
+        async login(body: logInReq) {
+            const { success, message } = await login(body)
+            if (success) {
+                const token = useCookie('token')
+                token.value = message.token
+                setToken(message.token)
+                this.isLoggedIn = true
+                this.userInfo = message.user
+                useRouter().push('/account')
+            }
+        },
+
 
         async register(body: signUpReq) {
             const { success, message } = await register(body)
@@ -50,3 +67,6 @@ export const useUserStore = defineStore('User', {
         },
     },
 })
+
+if (import.meta.hot)
+    import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
