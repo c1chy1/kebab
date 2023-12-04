@@ -1,11 +1,6 @@
 <template>
 <div>
 
-  <h1>WIELKI CHUJ</h1>
-
-
-
-
 <div>{{store.userInfo}}</div>
 
 <!--  <nuxt-img :src="store.userInfo.profilePicture"></nuxt-img>
