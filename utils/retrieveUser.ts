@@ -6,8 +6,7 @@ export const retrieveUser = async (token: string) => {
         headers: { token: `${token}` }
     })
 
-    console.log(response)
-    console.log(error)
+
 
     return error.value ? console.error(error.value.data) : response.value
 }

@@ -9,11 +9,10 @@ export default defineEventHandler(async (event) => {
         // 篩選掉當前的 Token
         const user = await User.findOne(body.email)
 
-        console.log(user)
+        setCookie(event,'token','',{
+            maxAge:0
+        })
 
-        user.tokens = user.tokens.filter((token: any) => token.token !== token)
-        // 將包含剩餘 Token 的使用者資料存回資料庫
-        await user.save()
         deleteCookie(event, 'token')
 
         return { success: true, message: null }

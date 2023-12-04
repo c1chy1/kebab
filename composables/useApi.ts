@@ -43,9 +43,7 @@ export async function login(body: logInReq) {
     return await useApi('/auth/login', body)
 }
 
-export async function register(body :any) {
-
-    console.log(body)
+export async function register(body : signUpReq) {
 
     return await useApi('/auth/register', body)
 }

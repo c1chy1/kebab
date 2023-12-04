@@ -8,8 +8,8 @@
 
 <div>{{store.userInfo}}</div>
 
-  <nuxt-img :src="store.userInfo.profilePicture"></nuxt-img>
-  <div>{{store.userInfo.profilePicture}}</div>
+<!--  <nuxt-img :src="store.userInfo.profilePicture"></nuxt-img>
+  <div>{{store.userInfo.profilePicture}}</div>-->
 
   <button @click="store.logout()"> LOG OUT</button>
 </div>

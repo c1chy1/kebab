@@ -19,7 +19,8 @@ export const useUserStore = defineStore('User', {
     getters: {},
     actions: {
 
-        async login(body: logInReq) {
+
+        async login(body: any) {
             const { success, message } = await login(body)
             if (success) {
                 const token = useCookie('token')
@@ -29,7 +30,6 @@ export const useUserStore = defineStore('User', {
                 this.userInfo = message.user
                 useRouter().push('/account')
 
-                console.log(success)
             }
         },
 

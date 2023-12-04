@@ -15,15 +15,6 @@ const UserSchema = new mongoose.Schema({
             required: true,
         },
 
-        tokens: [
-            {
-                token: {
-                    type: String,
-                    required: true,
-                },
-            },
-        ],
-
         profilePicture: {
             type: String,
             default: "https://c1chy.lima-city.de/graphic/Webentwicklung.png",
@@ -38,13 +29,16 @@ const UserSchema = new mongoose.Schema({
                 // 根據 account 至資料庫找尋該用戶資料
                 const user = await User.findOne({ email })
                 // 沒找到該用戶時，丟出錯誤訊息
+/*
+
+                if (user)
+                    throw new Error('Account EXIST!')
+*/
 
                 if (!user)
                     throw new Error('Account not found!')
                 // 透過 bcrypt 驗證密碼
                 const isMatch = await bcrypt.compare(password, user.password!)
-
-                console.log(isMatch + "isMatch")
 
                 // 驗證失敗時，丟出錯誤訊息
                 if (!isMatch)
@@ -53,12 +47,28 @@ const UserSchema = new mongoose.Schema({
                 return user
             },
 
+         async findByToken (token) {
+                let UserModel = this
+
+                try {
+                    let decoded = jwt.verify(token,  useRuntimeConfig().jwtSecret)
+                    return UserModel.findOne({
+                        _id: decoded.id,
+                        'token': token,
+                        'access': 'auth'
+                    })
+                } catch (e) {
+                    return Promise.reject(new Error(e))
+                }
+            },
+
 
             async findByEmail(email: string): Promise<any> {
                 const user = await User.findOne({ email })
-                if (user)
-                  return  new Error('Account Exist!')
+                if (!user)
+                    throw new Error('Account Exist!')
 
+                return user
             },
         },
 
@@ -67,9 +77,8 @@ const UserSchema = new mongoose.Schema({
                 // this 指向當前的使用者實例
                 const user = this
                 // 產生一組 JWT
-                const token = jwt.sign({ _id: user._id.toString() }, process.env.JWTSECRET!)
-                // 將該 token 存入資料庫中：讓使用者能跨裝置登入及登出
-                user.tokens = user.tokens.concat({ token })
+                const token = jwt.sign({ _id: user._id.toString() }, useRuntimeConfig().jwtSecret)
+                // 將該 token 存入資料庫中：
                 await user.save()
                 // 回傳 JWT
                 return token
