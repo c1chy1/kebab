@@ -4,7 +4,7 @@ import {useUserStore} from "~/store/userStore";
 
 
 useHead({
-  title: 'Log In',
+  title: 'Kebab',
 })
 const user = useUserStore()
 </script>

@@ -7,12 +7,12 @@ module.exports = {
         './plugins/**/*.{js,ts}',
         './app.vue',
     ],
-    plugins: [require("daisyui")],
+
     theme: {
         extend: {
-            colors: {
+     /*       colors: {
                 "primary": '#006b00',
-            },
+            },*/
             fontFamily: {
                 sans: ["'Bebas Neue'", 'bebas'],
                 mono: ["'Alfa Slab One'", 'alfa'],
@@ -39,4 +39,35 @@ module.exports = {
 
         },
     },
+    daisyui: {
+        themes: [
+            {
+                light: {
+                    'primary': '#006b00',
+                    'secondary': '#ff6d00',
+                    'shadow': '#fee7ba',
+                    'neutral': '#f2e9e1',
+                    'base-100': '#faf4ed',
+                    'info': '#56949f',
+                    'success': '#907aa9',
+                    'warning': '#ea9d34',
+                    'error': '#eb6f92',
+                },
+            },
+            {
+                dark: {
+                    'primary': '#393552',
+                    'secondary': '#a67925',
+                    'accent': '#eb6f92',
+                    'neutral': '#393552',
+                    'base-100': '#a67925',
+                    'info': '#9ccfd8',
+                    'success': '#c4a7e7',
+                    'warning': '#f6c177',
+                    'error': '#b4637a',
+                },
+            },
+        ],
+    },
+    plugins: [require("daisyui")],
 }

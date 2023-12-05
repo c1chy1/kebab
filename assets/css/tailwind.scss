@@ -1,5 +1,42 @@
 
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*@media (prefers-color-scheme: dark) {
+  .gradient {
+    z-index: 3;
+    width: 100%;
+    max-width: 640px;
+    background: var(--gradient-background);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(150%);
+    top: 80px;
+    opacity: 0.15;
+  }
+}*/
+
+[data-theme='dark'] {
+  /*
+  background: rgb(142 31 31 / 50%); !* here goes the dark theme gradient *!
+  */
+
+  .background-dark {
+
+    background: rgb(142 31 31 / 50%)
+  }
+}
+
+/*
+.background-dark {
+
+  background: rgba(0,0,0,0.5);
+}
+*/

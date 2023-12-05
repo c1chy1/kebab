@@ -1,8 +1,8 @@
 <template>
   <div class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover w-full h-screen z-1">
-    <ClientOnly>
+    <ClientOnly >
       <carousel
-          class="flex w-full md:block"
+          class="flex w-full md:block background-dark transition-all duration-500"
           :items-to-show="1"
           :autoplay="4000"
           :wrap-around="true"
@@ -36,7 +36,7 @@
 
 </h3>
 
-              <h1 class="text-[48px]   md:text-[94px] text-primary font-alfa font-500 flex flex-col leading-none  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis uppercase">Turkish
+              <h1 class="  text-[48px]   md:text-[94px] text-primary font-alfa font-500 flex flex-col leading-none  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis uppercase transition-all duration-500">Turkish
 
               <span class="text-[28px] md:text-[46px] pt-4">Kebab</span>
               </h1>

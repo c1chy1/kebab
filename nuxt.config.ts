@@ -4,40 +4,15 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineNuxtConfig({
 
-  // ssr :false,
 
   devtools: { enabled: true },
     modules: ['@tailwindcss/typography',['@pinia/nuxt', {
       autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
     }], '@nuxtjs/tailwindcss', '@formkit/nuxt', '@nuxt/image', '@nuxtjs/color-mode', 'vue3-carousel-nuxt','nuxt-font-loader'],
 
-/*  routeRules: {
-    '/api/!**': { cors: true },
-  },*/
   build: {
     transpile: ['gsap'],
   },
-/*  vite: {
-    plugins: [
-      nodePolyfills({
-        protocolImports: true,
-      }),
-    ],
-
-    optimizeDeps: {
-      include: ['jsonwebtoken'],
-    },
-    build: {
-      reportCompressedSize: true,
-      watch: {},
-      commonjsOptions: {
-        include: [/jsonwebtoken/, /node_modules/],
-      },
-
-
-    },
-
-  },*/
   fontLoader: {
 
     autoImport: true , // enables auto-import feature,
@@ -73,7 +48,7 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: [
-        'stores','helper'
+        'store','helper'
     ]
   },
   runtimeConfig: {
