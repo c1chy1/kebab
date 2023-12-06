@@ -1,12 +1,5 @@
 
 <template>
-
-
-
-
-
-
-
   <header class=" fixed z-10 w-full  " >
     <nav ref="image" class="navbar absolute top-0 left-0 w-full h-[105px] md:h-[136px] z-[0]
 bg-repeat-round  px-4 md:px-12  font-bebas">
@@ -30,9 +23,6 @@ bg-repeat-round  px-4 md:px-12  font-bebas">
           <li><a>Reservation</a></li>
           <li><a>Gallery</a></li>
           <li><a>Contact Us</a></li>
-          <li>
-            <AtomsButtonTheme/>
-          </li>
         </ul>
       </div>
     </nav>

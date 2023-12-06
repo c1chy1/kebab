@@ -14,10 +14,12 @@
 
 <!--  <nuxt-img :src="store.userInfo.profilePicture"></nuxt-img>
   <div>{{store.userInfo.profilePicture}}</div>-->
+<div class="flex flex-col w-56">
+  <nuxt-link to="/" class="button-orange">BACK</nuxt-link>
+  <button @click="store.logout()" class="button-orange"> LOG OUT</button>
+  <AtomsButtonTheme class="mx-auto mt-5"/>
+</div>
 
-  <button @click="store.logout()"> LOG OUT</button>
-
-<AtomsButtonTheme/>
 
 </section>
 

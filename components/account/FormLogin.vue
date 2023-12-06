@@ -6,20 +6,18 @@ const user = useUserStore()
 </script>
 
 <template >
-  <div class="w-full flex justify-center">
-
+  <div class="w-full mx-auto flex justify-center">
   <FormKit
       type="form"
       submit-label="Log in"
-      class=""
 
       :submit-attrs="{
-      inputClass: 'w-full mt-6 bg-[#ff6d00] hover:bg-primary border-none uppercase text-[17px] font-medium text-white transition-all ease-out duration-300  font-alfa inline-block py-4 px-10 ',
+      inputClass: 'button-orange w-full flex justify-center mx-auto',
     }"
       @submit="user.login"
   >
 
-    <nuxt-link class="w-full mt-6 bg-[#ff6d00] rounded-[12px]  hover:bg-primary border-none uppercase text-center text-[17px] font-medium text-white transition-all ease-out duration-300  font-alfa inline-block py-4 px-10 " to="/register">REGISTER</nuxt-link>
+    <nuxt-link class="button-orange" to="/register">REGISTER</nuxt-link>
     <FormKit
         type="text"
         name="email"

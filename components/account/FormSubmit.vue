@@ -11,7 +11,7 @@ const user = useUserStore()
       id="registration-example"
       submit-label="Register"
       :submit-attrs="{
-      inputClass: ' w-full mt-6 bg-[#ff6d00] rounded hover:bg-primary border-none uppercase text-[17px] font-medium text-white transition-all ease-out duration-300  font-alfa inline-block py-4 px-10 ',
+      inputClass: 'button-orange',
     }"
       @submit="user.register"
       :actions="false"

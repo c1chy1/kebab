@@ -7,36 +7,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@media (prefers-color-scheme: dark) {
-  .gradient {
-    z-index: 3;
-    width: 100%;
-    max-width: 640px;
-    background: var(--gradient-background);
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    filter: blur(100px) saturate(150%);
-    top: 80px;
-    opacity: 0.15;
+
+
+@layer components {
+  .button-orange {
+
+    font-family: 'Alfa Slab One', sans-serif;
+    @apply mt-6 bg-[#ff6d00] rounded hover:bg-primary border-none uppercase text-center text-[17px] font-medium text-white transition-all ease-out duration-300  inline-block py-4 px-10;
   }
-}*/
+}
 
 [data-theme='dark'] {
-  /*
-  background: rgb(142 31 31 / 50%); !* here goes the dark theme gradient *!
-  */
 
   .background-dark {
 
     background: rgb(142 31 31 / 50%)
   }
 }
-
-/*
-.background-dark {
-
-  background: rgba(0,0,0,0.5);
-}
-*/
