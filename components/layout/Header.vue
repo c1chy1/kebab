@@ -12,7 +12,7 @@
         <slide
             v-for="(slide, index) in kebabs"
             :key="slide"
-            class=" hero w-full  h-screen pt-36 md:px-12 "
+            class="hero w-full  h-screen pt-36 md:px-12 "
         >
           <div
               class="   relative w-4/5 max-w-full md:w-full  flex flex-col items-center    lg:flex-row-reverse "
@@ -138,7 +138,7 @@
 const kebabs = reactive([{
 
   img1: 'images/slides/1.png',
-  img2: 'images/slides/2.png'
+  img2: 'images/slides/1.png'
 
 }])
 

@@ -57,6 +57,9 @@ export const useUserStore = defineStore('User', {
             const { success, message } = await getUser()
             if (success && message)
                 this.userInfo = message.user
+
+            console.log(success)
+            console.log(message)
         },
 
         async logout() {

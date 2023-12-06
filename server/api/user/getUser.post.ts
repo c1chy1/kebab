@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
         const user = await User.aggregate([
                 {
                     $match: {
-                        'tokens.token': { $in: [cookies.token] },
+                        'token': { $in: [cookies.token] },
                     },
                 }, {
                     $project: {

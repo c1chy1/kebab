@@ -1,6 +1,8 @@
 
 import User from "~/server/db/models/user"
 
+import {setToken,getToken} from "~/helper/localStorage.helper"
+
 
 export default defineEventHandler(async (event) => {
     try {
@@ -13,7 +15,16 @@ export default defineEventHandler(async (event) => {
         )
 
         const token = await user!.generateAuthToken()
+
+
         setCookie(event, 'token', token)
+/*
+        setToken(token)
+
+      const test =  getToken()
+*/
+
+
         return {
             success: true,
             message: {
