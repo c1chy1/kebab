@@ -30,6 +30,4 @@ import {useThemeStore} from "~/store/useTheme";
 const themeStore = useThemeStore()
 const store = useUserStore();
 
-console.log(store.getUser())
-
 </script>
