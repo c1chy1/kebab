@@ -8,15 +8,14 @@ const user = useUserStore()
 <template >
   <FormKit
       type="form"
-      id="registration-example"
       submit-label="Register"
       :submit-attrs="{
-      inputClass: 'button-orange',
+      inputClass: 'button-orange flex justify-center mx-auto',
     }"
       @submit="user.register"
-      :actions="false"
       #default="{ value }"
   >
+    <nuxt-link to="/" class="button-orange">BACK</nuxt-link>
     <h1>Register!</h1>
     <p>
       You can put any type of element inside a form, not just FormKit inputs
@@ -61,10 +60,7 @@ const user = useUserStore()
                 help="Confirm your password"
             />-->
 
-    <FormKit
-        type="submit"
-        label="Register"
-    />
+
     <pre wrap>{{ value }}</pre>
   </FormKit>
 
