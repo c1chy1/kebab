@@ -10,10 +10,22 @@
 
 
 @layer components {
+
   .button-orange {
 
     font-family: 'Alfa Slab One', sans-serif;
     @apply mt-6 bg-[#ff6d00] rounded hover:bg-primary border-none uppercase text-center text-[17px] font-medium text-white transition-all ease-out duration-300  inline-block py-4 px-10;
+  }
+  .form-label {
+
+    font-family: "Montserrat", sans-serif;
+    @apply text-primary text-left font-semibold py-5 tracking-wider transition-all duration-500
+  }
+  .form-input {
+
+    font-family: "Bebas Neue", sans-serif;
+    @apply input join-item shadow-none text-[#3d3d3d] h-[65px] text-[21px] border-[#ced4da]
+
   }
 }
 

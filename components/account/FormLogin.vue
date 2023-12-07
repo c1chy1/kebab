@@ -17,16 +17,16 @@ const user = useUserStore()
       @submit="user.login"
   >
 
-    <nuxt-link class="button-orange" to="/register">REGISTER</nuxt-link>
+
     <FormKit
         type="text"
         name="email"
         label="E-Mail"
         placeholder="E-MAIL"
         wrapper-class="$reset block"
-        class="shadow-none text-[#3d3d3d] h-[65px] text-[21px] font-bebas border-[#ced4da] border-1"
         overlay-placeholder-class="text-[#3d3d3d]"
-        input-class="$reset authInput  input join-item shadow-none text-[#3d3d3d] h-[65px] text-[21px] font-bebas border-[#ced4da] border-1 "
+        label-class="form-label"
+        input-class="$reset form-input"
         inner-class="$reset"
         validation="required|email|"
         validation-visibility="live"
@@ -38,12 +38,13 @@ const user = useUserStore()
         label="Password"
         wrapper-class="$reset block"
         overlay-placeholder-class="text-[#3d3d3d]"
-        input-class="$reset authInput  input join-item shadow-none text-[#3d3d3d] h-[65px] text-[21px] font-bebas border-[#ced4da] border-1 "
+        label-class="form-label"
+        input-class="$reset authInput form-input"
         inner-class="$reset"
-        label-class="mb-1"
         validation="required|alphanumeric|length:6,16"
         value="test12"
     />
+    <nuxt-link class="button-orange w-full" to="/register">REGISTER</nuxt-link>
   </FormKit>
   </div>
 </template>
