@@ -10,9 +10,7 @@ module.exports = {
 
     theme: {
         extend: {
-     /*       colors: {
-                "primary": '#006b00',
-            },*/
+
             fontFamily: {
                 sans: ["'Bebas Neue'", 'bebas'],
                 mono: ["'Alfa Slab One'", 'alfa'],
