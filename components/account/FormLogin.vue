@@ -6,13 +6,13 @@ const user = useUserStore()
 </script>
 
 <template >
-  <div class="w-full mx-auto flex justify-center">
+  <div class="w-full mx-auto flex flex-col items-center justify-center">
   <FormKit
       type="form"
       submit-label="Log in"
 
       :submit-attrs="{
-      inputClass: 'button-orange w-full flex justify-center mx-auto',
+      inputClass: 'button-orange ',
     }"
       @submit="user.login"
   >
@@ -44,7 +44,8 @@ const user = useUserStore()
         validation="required|alphanumeric|length:6,16"
         value="test12"
     />
-    <nuxt-link class="button-orange w-full" to="/register">REGISTER</nuxt-link>
   </FormKit>
+    <nuxt-link class="button-orange" to="/register">REGISTER</nuxt-link>
+
   </div>
 </template>

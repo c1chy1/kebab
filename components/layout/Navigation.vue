@@ -69,8 +69,6 @@ onMounted(()=> {
   }).to(image.value, {
     yPercent:-15
 
-  }).to('.cta', {
-    x: -50
   })
 })
 
