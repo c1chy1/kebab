@@ -12,7 +12,7 @@ const user = useUserStore()
       submit-label="Log in"
 
       :submit-attrs="{
-      inputClass: 'button-orange ',
+      inputClass: 'button-orange mx-auto',
     }"
       @submit="user.login"
   >
