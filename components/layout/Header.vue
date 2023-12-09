@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const kebabs = reactive([
-  '../images/slides/1.png',
-  './images/slides/1.png'
+  'images/slides/1.png',
+  'images/slides/1.png'
 ])
 
 </script>
