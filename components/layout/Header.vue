@@ -40,7 +40,7 @@ const kebabs = reactive([
                 ><img
                     :src="slide"
               class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
-            <div
+<!--            <div
                 class=" absolute overflow-hidden flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[40px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
               <article
@@ -58,7 +58,7 @@ const kebabs = reactive([
                 <span class="text-[28px] md:text-[46px] pt-4">Kebab</span>
               </h1>
 
-            </div>
+            </div>-->
           </div>
 
         </div>
