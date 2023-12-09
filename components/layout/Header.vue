@@ -11,17 +11,17 @@ const kebabs = reactive([
 
     <Swiper
 
-        class="flex md:block h-screen  background-dark transition-all duration-500"
+              class="flex md:block h-screen  background-dark transition-all duration-500"
 
-        :modules="[SwiperAutoplay, SwiperEffectCreative]"
-        :slides-per-view="1"
-        :loop="true"
-        :effect="'creative'"
-        :autoplay="{
+              :modules="[SwiperAutoplay, SwiperEffectCreative]"
+              :slides-per-view="1"
+              :loop="true"
+              :effect="'creative'"
+              :autoplay="{
       delay: 4000,
       disableOnInteraction: true,
     }"
-        :creative-effect="{
+              :creative-effect="{
       prev: {
         shadow: false,
         translate: ['-100%', 0, -1],
@@ -30,15 +30,15 @@ const kebabs = reactive([
         translate: ['100%', 0, 0],
       },
     }"
-    >
-      <SwiperSlide v-for="slide in kebabs" :key="slide"
-                   class="hero   pt-16 lg:pt-36 md:px-12 "
-      >
-        <div v-if="slide">
-          <div
-              class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
-          ><img
-              :src="slide"
+          >
+            <SwiperSlide v-for="slide in kebabs" :key="slide"
+                         class="hero   pt-16 lg:pt-36 md:px-12 "
+            >
+              <div v-if="slide">
+                <div
+                    class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
+                ><img
+                    :src="slide"
               class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
             <div
                 class=" absolute overflow-hidden flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[40px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">

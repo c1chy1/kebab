@@ -44,7 +44,7 @@ module.exports = {
                     'primary': '#006b00',
                     'secondary': '#ff6d00',
                     'shadow': '#fee7ba',
-                    'neutral': '#f2e9e1',
+                    'neutral': '#ffe6d4',
                     'base-100': '#faf4ed',
                     'info': '#56949f',
                     'success': '#907aa9',

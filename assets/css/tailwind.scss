@@ -4,6 +4,19 @@
 @tailwind utilities;
 
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+  overflow-x: hidden;
+  text-rendering: geometricPrecision;
+
+
+}
+
+
 @layer components {
 
   .button-orange {
