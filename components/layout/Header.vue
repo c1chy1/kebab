@@ -1,24 +1,45 @@
+<script setup lang="ts">
+const kebabs = reactive([
+  'images/slides/1.png',
+  'images/slides/1.png'
+])
+
+</script>
+
 <template>
   <div class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover w-full h-screen z-1">
-    <ClientOnly>
-      <carousel
-          class="flex w-full md:block background-dark transition-all duration-500"
-          :items-to-show="1"
-          :autoplay="4000"
-          :wrap-around="true"
-          touchDrag
-          mouseDrag
+
+    <Swiper
+
+        class="flex w-full md:block background-dark transition-all duration-500"
+
+        :modules="[SwiperAutoplay, SwiperEffectCreative]"
+        :slides-per-view="1"
+        :loop="true"
+        :effect="'creative'"
+        :autoplay="{
+      delay: 4000,
+      disableOnInteraction: true,
+    }"
+        :creative-effect="{
+      prev: {
+        shadow: false,
+        translate: ['-100%', 0, -1],
+      },
+      next: {
+        translate: ['100%', 0, 0],
+      },
+    }"
+    >
+      <SwiperSlide v-for="slide in kebabs" :key="slide"
+                   class="hero w-full  h-screen  pt-16 lg:pt-36 md:px-12 "
       >
-        <slide
-            v-for="(slide, index) in kebabs"
-            :key="slide"
-            class="hero w-full  h-screen  pt-16 lg:pt-36 md:px-12 "
-        >
+        <div v-if="slide">
           <div
-              class="relative w-3/5  sm:w-4/5 max-w-full md:w-full  flex flex-col items-center lg:justify-between   lg:flex-row-reverse uppercase "
+              class="relative flex flex-col items-center text-center lg:justify-between   lg:flex-row-reverse uppercase "
           ><img
-                src="~/assets/images/slides/1.png"
-                class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
+              :src="slide"
+              class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
             <div
                 class=" absolute overflow-hidden flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[40px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
@@ -40,215 +61,14 @@
             </div>
           </div>
 
-        </slide>
-      </carousel>
-    </ClientOnly>
+        </div>
 
+
+      </SwiperSlide>
+    </Swiper>
   </div>
 </template>
-<script setup lang="ts">
 
+<style scoped>
 
-const kebabs = reactive([{
-
-  img1: 'images/slides/1.png',
-  img2: 'images/slides/1.png'
-
-}])
-
-
-</script>
-<style lang="scss" scoped>
-.portofolio-section {
-  .carousel-dekstop {
-    display: block;
-  }
-
-  .carousel-mobile {
-    display: none;
-  }
-
-  .title-por {
-    display: none;
-  }
-
-  .card-carousel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    .card-box {
-      position: absolute;
-      left: 17%;
-      padding-left: 55px;
-      width: 633px;
-      height: 383px;
-      border-radius: 21px;
-      border: 0.5px solid #858585;
-      background: rgba(120, 17, 20, 0.6);
-      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(9.5px);
-
-      .logo-box {
-        margin-bottom: 16px;
-        height: 46px;
-      }
-
-      .text-box {
-        text-align: left;
-        color: #fff;
-        font-family: "okta";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-
-        .bold-text {
-          color: #fff;
-          font-family: "okta";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-        }
-      }
-
-      .btn-readmore {
-        position: absolute;
-        bottom: 31px;
-        right: 36px;
-        width: 135px;
-        height: 30px;
-        border-radius: 6px;
-        background: #ec1f27;
-        color: #fff;
-        text-align: center;
-        font-family: "okta";
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        letter-spacing: 1.885px;
-        cursor: pointer;
-      }
-
-      .btn-readmore:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-
-  .custom-page {
-    cursor: pointer;
-    position: absolute;
-    bottom: 21px;
-
-    .custom-dekstop {
-      display: flex;
-    }
-
-    .custom-mobile {
-      display: none;
-    }
-  }
-
-  .btn-slide {
-    position: absolute;
-    bottom: 60px;
-
-    .next-mobile {
-      display: none;
-    }
-
-    .prev-mobile {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .portofolio-section {
-    height: 770px;
-
-    .title-por {
-      position: absolute;
-      top: 0px;
-      color: #fff;
-      text-align: center;
-      text-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.72);
-      font-family: "okta";
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 28px;
-    }
-
-    .carousel-dekstop {
-      display: none;
-    }
-
-    .carousel-mobile {
-      display: flex;
-
-      .card-carousel {
-        padding-left: 20px;
-        padding-right: 20px;
-
-        .card-box {
-          width: 100%;
-          height: 400px;
-          padding: 20px;
-
-          .logo-box {
-            height: 40px;
-            margin-top: 0px;
-            object-fit: cover;
-            margin-left: auto;
-            margin-right: auto;
-          }
-
-          .btn-readmore {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 30px;
-          }
-        }
-      }
-    }
-
-    .btn-slide {
-      position: absolute;
-      bottom: 100px;
-
-      .next-mobile {
-        position: absolute;
-        display: flex;
-        right: 20px;
-        bottom: 11px;
-        cursor: pointer;
-      }
-
-      .prev-mobile {
-        position: absolute;
-        display: flex;
-        left: 20px;
-        bottom: 11px;
-        cursor: pointer;
-      }
-    }
-
-    .custom-page {
-      position: absolute;
-      bottom: 0px;
-      cursor: pointer;
-
-      .custom-dekstop {
-        display: none;
-      }
-
-      .custom-mobile {
-        display: flex;
-      }
-    }
-  }
-}
 </style>
