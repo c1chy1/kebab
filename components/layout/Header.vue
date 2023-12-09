@@ -1,17 +1,17 @@
 <script setup lang="ts">
 const kebabs = reactive([
-  'images/slides/1.png',
-  'images/slides/1.png'
+  '../images/slides/1.png',
+  './images/slides/1.png'
 ])
 
 </script>
 
 <template>
-  <div class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover w-full h-screen z-1">
+  <div class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
 
     <Swiper
 
-        class="flex w-full md:block background-dark transition-all duration-500"
+        class="flex md:block background-dark transition-all duration-500"
 
         :modules="[SwiperAutoplay, SwiperEffectCreative]"
         :slides-per-view="1"
@@ -32,7 +32,7 @@ const kebabs = reactive([
     }"
     >
       <SwiperSlide v-for="slide in kebabs" :key="slide"
-                   class="hero w-full  h-screen  pt-16 lg:pt-36 md:px-12 "
+                   class="hero  h-screen  pt-16 lg:pt-36 md:px-12 "
       >
         <div v-if="slide">
           <div
