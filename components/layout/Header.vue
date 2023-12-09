@@ -11,7 +11,7 @@ const kebabs = reactive([
 
     <Swiper
 
-        class="flex md:block background-dark transition-all duration-500"
+        class="flex md:block h-screen  background-dark transition-all duration-500"
 
         :modules="[SwiperAutoplay, SwiperEffectCreative]"
         :slides-per-view="1"
@@ -32,7 +32,7 @@ const kebabs = reactive([
     }"
     >
       <SwiperSlide v-for="slide in kebabs" :key="slide"
-                   class="hero  h-screen  pt-16 lg:pt-36 md:px-12 "
+                   class="hero   pt-16 lg:pt-36 md:px-12 "
       >
         <div v-if="slide">
           <div
