@@ -36,7 +36,7 @@ const kebabs = reactive([
       >
         <div v-if="slide">
           <div
-              class="relative flex flex-col items-center text-center lg:justify-between   lg:flex-row-reverse uppercase "
+              class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
           ><img
               :src="slide"
               class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
