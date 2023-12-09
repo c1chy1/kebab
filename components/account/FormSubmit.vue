@@ -62,7 +62,7 @@ const user = useUserStore()
         placeholder="Your password"
         help="Choose a password"
     />
-    <pre wrap>{{ value }}</pre>
+<!--    <pre wrap>{{ value }}</pre>-->
   </FormKit>
   </div>
 

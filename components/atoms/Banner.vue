@@ -1,15 +1,16 @@
 
 <template>
-<article class="relative md:h-[50%-35px] mt-[35px] overflow-hidden">
-<div class="absolute top-0 left-0 text-white ml-8 mt-7 z-[1]">
-  <h4 class="text-[25px] font-medium font-bebas leading-normal">{{subject}}</h4>
-  <h3 class="text-[42px] font-medium" >{{ title }}</h3>
+<article class="relative  w-full overflow-hidden rounded-xl">
+<div class="absolute top-0 left-0 text-white ml-3 mt-2 lg:ml-8 lg:mt-7 z-[1]">
+  <h4 class="  text-[22px] lg:text-[25px] font-medium font-bebas leading-normal">{{subject}}</h4>
+  <h3 class=" text-[32px]  lg:text-[42px] font-medium" >{{ title }}</h3>
 
 </div>
 
         <img :src="src"
              class="
-             hover:scale-110
+             w-full
+             hover:scale-105
              transition
              duration-500
              cursor-pointer

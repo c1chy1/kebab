@@ -36,6 +36,7 @@ const user = useUserStore()
         type="password"
         name="password"
         label="Password"
+        placeholder="PASSWORD"
         wrapper-class="$reset block"
         overlay-placeholder-class="text-[#3d3d3d]"
         label-class="form-label"
