@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
     modules: ['@tailwindcss/typography',['@pinia/nuxt', {
       autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
-    }], '@nuxtjs/tailwindcss', '@formkit/nuxt', '@nuxt/image', '@nuxtjs/color-mode', 'vue3-carousel-nuxt','nuxt-font-loader','@nuxt/image-edge'],
+    }], '@nuxtjs/tailwindcss','nuxt-swiper', '@formkit/nuxt', '@nuxt/image', '@nuxtjs/color-mode','nuxt-font-loader','@nuxt/image-edge'],
 
   build: {
     transpile: ['gsap'],

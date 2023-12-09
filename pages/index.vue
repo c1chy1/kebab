@@ -14,7 +14,9 @@ const user = useUserStore()
 
   <LayoutNavigation/>
 
-  <LayoutHeader/>
+
+  <LayoutSwiper/>
+<!--  <LayoutHeader/>-->
   <LayoutHome/>
   <AccountFormLogin/>
 <section class="h-screen"></section>
