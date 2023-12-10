@@ -16,6 +16,7 @@ const kebabs = reactive([
               :modules="[SwiperAutoplay, SwiperEffectCreative]"
               :slides-per-view="1"
               :loop="true"
+              :speed="1000"
               :effect="'creative'"
               :autoplay="{
       delay: 4000,

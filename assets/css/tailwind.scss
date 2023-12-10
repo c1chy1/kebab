@@ -35,6 +35,12 @@ body {
     @apply input join-item shadow-none text-[#3d3d3d]  h-[50px] lg:h-[65px] text-[18px] lg:text-[21px] border-[#ced4da]
 
   }
+
+  .test {
+
+    @apply scale-125 transition-all duration-500 rounded-xl
+
+  }
 }
 
 [data-theme='dark'] {
