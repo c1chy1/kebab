@@ -40,7 +40,7 @@ const hamburgers = reactive([
     <div class="flex w-full">
 
       <swiper
-          class="swiper"
+          class="swiper w-full"
           :slides-per-view="3"
           :loop="true"
           :space-between="0"
@@ -83,60 +83,6 @@ const hamburgers = reactive([
           </div>
         </SwiperSlide>
       </swiper>
-
-
-      <!--    <Swiper
-
-              class=" h-screen  background-dark transition-all duration-500"
-
-              :modules="[ SwiperEffectCreative]"
-              :slides-per-view="3"
-              :loop="true"
-      :free-mode="true"
-              :effect="'creative'"
-              :creative-effect="{
-            prev: {
-              shadow: false,
-              translate: ['0%', 0, 0],
-            },
-            next: {
-              translate: ['100%', 0,0],
-            },
-          }"
-          >
-            <SwiperSlide v-for="slide in hamburgers" :key="slide"
-                         class="hero pt-16 lg:pt-36 md:px-12 "
-            >
-              <div v-if="slide" class="card mx-auto w-96 bg-base-100 shadow-xl">
-                <figure class="px-10 pt-10">
-                  <img  :src="slide" alt="Shoes" class="rounded-xl" />
-                </figure>
-                <div class="card-body items-center text-center">
-                  <h2 class="card-title text-[38px] text-primary py-6 mb-2.5 font-bebas  font-medium uppercase ">Hamburger2</h2>
-                  <p class="text-[17px]  mb-9 leading-tight font-light lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                  <div class="card-actions">
-                    <button class="btn button-orange">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
-      &lt;!&ndash;        <div v-if="slide">
-                <div
-                    class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
-                ><img
-                    :src="slide"
-                    class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
-
-                  <h4 class="text-[38px] text-primary py-6 mb-2.5 font-bebas  font-medium uppercase ">Hamburger2</h4>
-                  <p class="text-[17px] w-1/2 mb-9 leading-tight font-light lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-
-              </div>&ndash;&gt;
-
-
-            </SwiperSlide>
-          </Swiper>-->
-
     </div>
   </section>
 </template>
