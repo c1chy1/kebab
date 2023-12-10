@@ -64,7 +64,7 @@ const hamburgers = reactive([
         <SwiperSlide v-for="slide in hamburgers" :key="slide"
                      class="hero py-16 lg:pt-36 md:px-12"
         >
-          <div v-if="slide" class="card mx-auto  h-full w-10/12 bg-base-100 shadow-xl">
+          <div v-if="slide" class="card mx-auto  h-full w-10/12">
             <figure class="   px-4 py-4 lg:px-10 lg:py-10 h-1/2">
               <nuxt-img
                   format="webp"
