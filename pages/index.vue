@@ -20,7 +20,7 @@ const user = useUserStore()
   <LayoutHome/>
   <LayoutMenu/>
   <AccountFormLogin/>
-<section class="h-screen"></section>
+
 
 
 

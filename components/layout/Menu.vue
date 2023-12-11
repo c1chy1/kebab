@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/*
 const hamburgers = reactive([
   'images/menu-slides/menu_1.png',
   'images/menu-slides/menu_2.png',
@@ -7,9 +8,10 @@ const hamburgers = reactive([
   'images/menu-slides/menu_2.png',
   'images/menu-slides/menu_3.png',
 ])
+*/
 
 
-/*const hamburgers = reactive([
+const hamburgers = reactive([
 
   {
     img: 'images/menu-slides/menu_1.png',
@@ -20,13 +22,33 @@ const hamburgers = reactive([
     img: 'images/menu-slides/menu_2.png',
     title: 'menu2',
     id:2
+  },
+  {
+    img: 'images/menu-slides/menu_3.png',
+    title: 'menu3',
+    id:2
+  },
+  {
+    img: 'images/menu-slides/menu_4.png',
+    title: 'menu4',
+    id:2
+  },
+  {
+    img: 'images/menu-slides/menu_2.png',
+    title: 'menu5',
+    id:2
+  },
+  {
+    img: 'images/menu-slides/menu_3.png',
+    title: 'menu6',
+    id:2
   }
 
-])*/
+])
 </script>
 
 <template>
-  <section class="text-center uppercase ">
+  <section class="text-center uppercase flex flex-col">
     <h5 class="text-[22px] text-secondary mb-7 font-bebas font-medium bg-neutral inline-block py-2 px-6">Always Tasty
       Burger</h5>
     <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa  ">Choose &amp;
@@ -37,15 +59,26 @@ const hamburgers = reactive([
       <br>
       Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
     </p>
+
+
+
     <div class="flex w-full">
 
       <swiper
           class="swiper w-full"
           :slides-per-view="3"
           :loop="true"
-          :space-between="0"
-          :centered-slides="true"
+          :modules="[SwiperEffectCreative]"
           :pagination="{ clickable: true }"
+          :creative-effect="{
+      prev: {
+        shadow: false,
+        translate: ['-100%', 0, -1],
+      },
+      next: {
+        translate: ['100%', 0, 0],
+      },
+    }"
           :breakpoints="{
       '0': {
         slidesPerView: 1,
@@ -65,15 +98,14 @@ const hamburgers = reactive([
                      class="hero py-16 lg:pt-36 md:px-12"
         >
           <div v-if="slide" class="card mx-auto  h-full w-10/12">
-            <figure class="   px-4 py-4 lg:px-10 lg:py-10 h-1/2">
-              <nuxt-img
-                  format="webp"
-                  :src="slide"
+            <figure class="px-4 py-4 lg:px-10 lg:py-10 h-1/2">
+              <img
+                  :src="slide.img"
                   class="z-10"/>
             </figure>
             <div class="card-body items-center text-center h-1/2">
               <h2 class="card-title text-[38px] text-primary py-4 mb-2.5 font-bebas  font-medium uppercase ">
-                Hamburger2</h2>
+                {{slide.title}}</h2>
               <p class="text-[17px]  4 leading-tight font-light lowercase contents">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do</p>
               <div class="card-actions">
@@ -89,7 +121,7 @@ const hamburgers = reactive([
 
 <style scoped>
 
-.swiper-slide-active img {
+.swiper-slide-next img {
 
   transition: all 1s;
   transform: scale(1.15);
