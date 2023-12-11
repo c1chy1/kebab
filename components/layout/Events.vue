@@ -52,7 +52,7 @@ const hamburgers = reactive([
 
 
 
-      <SwiperSlide v-for="(slide, i) in hamburgers" :key="i" virtual-index="i"
+      <SwiperSlide v-for="slide in hamburgers" :key="slide"
                    class="text-left bg-white"
       >
 
