@@ -1,47 +1,36 @@
 <script setup lang="ts">
-/*
-const hamburgers = reactive([
-  'images/menu-slides/menu_1.png',
-  'images/menu-slides/menu_2.png',
-  'images/menu-slides/menu_3.png',
-  'images/menu-slides/menu_4.png',
-  'images/menu-slides/menu_2.png',
-  'images/menu-slides/menu_3.png',
-])
-*/
 
 
 const hamburgers = reactive([
 
   {
     img: 'images/menu-slides/menu_1.png',
-    title: 'menu1',
-    id: 1
+    title: 'Hamburger1',
+
   },
   {
     img: 'images/menu-slides/menu_2.png',
-    title: 'menu2',
-    id:2
+    title: 'Hamburger2',
+
   },
   {
     img: 'images/menu-slides/menu_3.png',
-    title: 'menu3',
-    id:2
+    title: 'Hamburger3',
+
   },
   {
     img: 'images/menu-slides/menu_4.png',
-    title: 'menu4',
-    id:2
+    title: 'Hamburger4',
+
   },
   {
     img: 'images/menu-slides/menu_2.png',
-    title: 'menu5',
-    id:2
+    title: 'Hamburger5',
+
   },
   {
     img: 'images/menu-slides/menu_3.png',
-    title: 'menu6',
-    id:2
+    title: 'Hamburger6',
   }
 
 ])
