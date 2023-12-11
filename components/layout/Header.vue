@@ -7,12 +7,11 @@ const kebabs = reactive([
 </script>
 
 <template>
-  <div class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
+  <section class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
 
     <Swiper
 
               class="flex md:block h-screen  background-dark transition-all duration-500"
-
               :modules="[SwiperAutoplay, SwiperEffectCreative]"
               :slides-per-view="1"
               :loop="true"
@@ -66,7 +65,7 @@ const kebabs = reactive([
 
       </SwiperSlide>
     </Swiper>
-  </div>
+  </section>
 </template>
 
 <style scoped>

@@ -19,6 +19,7 @@ const user = useUserStore()
   <LayoutHeader/>
   <LayoutHome/>
   <LayoutMenu/>
+  <LayoutEvents/>
   <AccountFormLogin/>
 
 

@@ -38,7 +38,7 @@ const hamburgers = reactive([
 
 <template>
   <section class="text-center uppercase flex flex-col">
-    <h5 class="text-[22px] text-secondary mb-7 font-bebas font-medium bg-neutral inline-block py-2 px-6">Always Tasty
+    <h5 class="text-[22px] text-secondary w-56 mb-7 mx-auto font-bebas font-medium bg-neutral inline-block py-4 px-6">Always Tasty
       Burger</h5>
     <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa  ">Choose &amp;
       Enjoy</h2>
@@ -57,8 +57,8 @@ const hamburgers = reactive([
           class="swiper w-full"
           :slides-per-view="3"
           :loop="true"
+          :speed="1000"
           :modules="[SwiperEffectCreative]"
-          :pagination="{ clickable: true }"
           :creative-effect="{
       prev: {
         shadow: false,

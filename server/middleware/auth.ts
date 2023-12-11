@@ -17,7 +17,6 @@ export default defineEventHandler(async (event) => {
     try {
         const token = parseCookies(event)?.token
 
-        console.log(token + "token")
 
         if (!token)
             throw new Error('Need token to proceed!')

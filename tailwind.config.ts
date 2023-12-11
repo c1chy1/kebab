@@ -10,7 +10,9 @@ module.exports = {
 
     theme: {
         extend: {
-
+            boxShadow: {
+                'xl': '18px 24px 43px 0 rgba(0, 0, 0, .17)',
+            },
             fontFamily: {
                 sans: ["'Bebas Neue'", 'bebas'],
                 mono: ["'Alfa Slab One'", 'alfa'],

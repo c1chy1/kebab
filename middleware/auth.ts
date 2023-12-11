@@ -6,7 +6,6 @@ export default defineNuxtRouteMiddleware(() => {
     const { isLoggedIn } = storeToRefs(user)
     const token = useCookie('token')
 
-    console.log(token)
     if (token.value)
         isLoggedIn.value = true // update the state to authenticated
 
