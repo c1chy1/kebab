@@ -29,7 +29,7 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section class="lg:px-24 lg:py-24 text-center space-y-6">
+  <section id="events" class="lg:px-20 lg:py-24 text-center space-y-6">
     <Swiper
         effect="fade"
         :speed="1000"
@@ -47,7 +47,7 @@ const hamburgers = reactive([
         },
       }"
         :modules="modules"
-        class="overflow-hidden shadow-xl relative"
+        class="overflow-hidden hero shadow-xl relative"
     >
 
 
@@ -56,9 +56,9 @@ const hamburgers = reactive([
                    class="text-left bg-white"
       >
 
-        <div class="hero flex">
-          <div class="hero-content w-1/2 flex-col lg:flex-row-reverse">
-            <div >
+        <div class=" hero-content items-start max-w-full p-6">
+          <div class=" w-1/2  py-16 pl-12 pr-5">
+
               <h2 class="text-[38px] text-primary  font-bebas  font-light uppercase ">
                 {{slide.label}}</h2>
               <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa uppercase ">
@@ -70,9 +70,10 @@ const hamburgers = reactive([
                 Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
               </p>
 
-            </div>
+
           </div>
-          <img :src="slide.img" class="w-1/2 block">
+
+          <img :src="slide.img" class="w-1/2">
 
         </div>
 

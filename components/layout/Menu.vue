@@ -37,7 +37,7 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section class="text-center uppercase flex flex-col">
+  <section id="menu" class="text-center uppercase flex flex-col">
     <h5 class="text-[22px] text-secondary w-56 mb-7 mx-auto font-bebas font-medium bg-neutral inline-block py-4 px-6">Always Tasty
       Burger</h5>
     <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa  ">Choose &amp;
@@ -48,11 +48,7 @@ const hamburgers = reactive([
       <br>
       Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
     </p>
-
-
-
     <div class="flex w-full">
-
       <swiper
           class="swiper w-full"
           :slides-per-view="3"

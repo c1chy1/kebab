@@ -12,22 +12,27 @@ bg-repeat-round  px-4 md:px-12  font-bebas">
 
       </div>
       <div class="navbar-end hidden lg:flex items-end flex-col w-full text-primary ">
-        <div class="flex items-center space-x-5 pt-6 ">
+        <div class="flex items-center space-x-5 pt-6 pr-9 ">
           <img class="animate-shake delay-500" src="/delivery-icon.png" >
           <h2 class="text-base text-center font-semibold font-mont py-5 tracking-wider transition-all duration-500"  >Call for Delivery +4 450 68 7474</h2>
         </div>
-        <ul class="menu menu-horizontal gap-4 px-1 text-[25px] tracking-[4px] uppercase transition-all duration-500">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><a>Menu</a></li>
-          <li><a>Events</a></li>
-          <li><a>Reservation</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Contact Us</a></li>
+        <ul ref="menu" class="menu menu-horizontal gap-4 px-1 text-[25px] tracking-[4px] relative uppercase transition-all duration-500">
+          <li><nuxt-link href="#header" @click="$scrollTo('#header')" >Home</nuxt-link></li>
+          <li><nuxt-link href="#menu" @click="$scrollTo('#menu')"  >Menu</nuxt-link></li>
+          <li><nuxt-link href="#events" @click="$scrollTo('#events')">Events</nuxt-link></li>
+          <li><nuxt-link href="#reservation" @click="$scrollTo('#reservation')">Reservation</nuxt-link></li>
+          <li><nuxt-link href="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
+          <li><nuxt-link href="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
+<li>
+  <button ref="scrollToTop" @click="$scrollToTop" class="scroll-top-button">
+  <ScrollToTop class="fill-white w-4"/>
+  </button>
+</li>
         </ul>
       </div>
     </nav>
 
-    <div  ref="navbar" class=" nav-bg bg-[url('/bg.png')] filter-dark "></div>
+    <div  ref="navbar" class="nav-bg bg-[url('/bg.png')] filter-dark "></div>
   </header>
 </template>
 
@@ -36,19 +41,30 @@ bg-repeat-round  px-4 md:px-12  font-bebas">
 <script setup lang="ts">
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import ScrollToTop from "~/components/atoms/ScrollToTop.vue";
+const {$scrollToTop , $scrollTo }  = useNuxtApp()
 
 const navbar = ref()
+const menu = ref()
 const image = ref()
+const scrollToTop = ref()
 
 
 onMounted(()=> {
+
+
 
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(navbar.value, {
     opacity : 0,
   })
+  gsap.to(scrollToTop.value, {
+    opacity : 0,
+    xPercent: 200,
+
+  })
+
 
   gsap.set(image.value, {
     yPercent : 0
@@ -59,7 +75,7 @@ onMounted(()=> {
       start : 'top+=50',
       end: 'top+=100',
       toggleActions: 'play none reverse none',
-      scrub: 3
+      scrub: 2
     }
   })
 
@@ -69,14 +85,16 @@ onMounted(()=> {
   }).to(image.value, {
     yPercent:-15
 
+  }).to(menu.value, {
+
+    x: -50
+
+  }).to(scrollToTop.value, {
+    xPercent:0,
+    opacity : 1,
+    backgroundColor: '#006b00'
   })
 })
-
-
-
-
-console.log(gsap)
-console.log(ScrollTrigger)
 </script>
 <style scoped>
 
@@ -88,13 +106,6 @@ console.log(ScrollTrigger)
   width: 100%;
   height: 136px;
   z-index: -1;
-
-}
-
-a.cta {
-
-  background: white;
-  padding: .5em .8em;
 
 }
 

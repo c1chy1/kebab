@@ -7,7 +7,7 @@ const kebabs = reactive([
 </script>
 
 <template>
-  <section class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
+  <section id="header" class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
 
     <Swiper
 
