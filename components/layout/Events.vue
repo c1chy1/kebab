@@ -1,10 +1,6 @@
-
-
-
-
 <script setup lang="ts">
 
-const modules = [SwiperPagination , SwiperEffectFade]
+const modules = [SwiperPagination, SwiperEffectFade]
 const hamburgers = reactive([
 
   {
@@ -34,12 +30,17 @@ const hamburgers = reactive([
         effect="fade"
         :speed="1000"
         :slides-per-view="1"
-        :spaceBetween="10"
+        :spaceBetween="15"
         :pagination="{
         clickable: true,
-
+          el: '.pagination',
       }"
-
+        :style="{
+        '--swiper-pagination-bullet-width': '17px',
+        '--swiper-pagination-bullet-height': '17px',
+        '--swiper-pagination-color': '#ff6d00',
+        '--swiper-pagination-bullet-horizontal-gap': '6px'
+      }"
         :breakpoints="{
         '768': {
           //slidesPerView: 4,
@@ -51,24 +52,24 @@ const hamburgers = reactive([
     >
 
 
-
       <SwiperSlide v-for="slide in hamburgers" :key="slide"
                    class="text-left bg-white"
       >
 
         <div class=" hero-content items-start max-w-full p-6">
-          <div class=" w-1/2  py-16 pl-12 pr-5">
+          <div class=" w-1/2  py-16 pl-12 pr-7">
 
-              <h2 class="text-[38px] text-primary  font-bebas  font-light uppercase ">
-                {{slide.label}}</h2>
-              <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa uppercase ">
-                {{slide.title}}
-              </h2>
+            <h2 class="text-[29px] text-primary  font-bebas  font-light uppercase ">
+              {{ slide.label }}</h2>
+            <h2 class="text-[36px] lg:text-[42px] mb-2.5 text-primary leading-tight font-medium font-alfa uppercase ">
+              {{ slide.title }}
+            </h2>
 
-              <p class="py-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-              </p>
+            <p class=" text-[21px] leading-8 py-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+              Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            </p>
 
 
           </div>
@@ -78,15 +79,56 @@ const hamburgers = reactive([
         </div>
 
       </SwiperSlide>
+      <div class="pagination swiper-pagination">
 
-      <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
+
+      </div>
     </Swiper>
 
   </section>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.swiper-pagination {
+  left: 4.5rem;
+  bottom: 4rem;
+  text-align: left;
+}
+
+/*
+
+.sliderWrapper {
+  :global(.swiper-pagination-bullet) {
+    background: red;
+    width: 1rem;
+    height: 1rem;
+    border-radius: .5rem;
+    opacity: 1;
+    position: absolute;
+    left:5rem;
+    bottom: 5rem
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: blue;
+    width: 1rem;
+    height: 1rem;
+    border-radius: .5rem;
+  }
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: blue;
+  opacity: 1;
+}
+
+!* target all bullets *!
+.swiper-pagination-bullet {
+  background-color: red;
+  opacity: 1;
+}
 .swiper-pagination-bullet-custom {
 
   width: 230px;
@@ -102,19 +144,7 @@ const hamburgers = reactive([
   color: #fff;
   background: #007aff;
 }
-.bullet  {
+*/
 
-
-}
-.pagination .swiper-pagination-bullet {
-width: 2rem !important;
-}
-
-
-.pagination  {
-  position: absolute;
-  left: 4rem;
-  bottom: 2rem
-}
 
 </style>
