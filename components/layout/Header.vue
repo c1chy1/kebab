@@ -1,11 +1,3 @@
-<script setup lang="ts">
-const kebabs = reactive([
-  'images/slides/1.png',
-  'images/slides/1.png'
-])
-
-</script>
-
 <template>
   <section id="header" class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
 
@@ -37,7 +29,10 @@ const kebabs = reactive([
               <div v-if="slide">
                 <div
                     class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
-                ><img
+                >
+
+
+                  <img
                     :src="slide" class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
             <div class="hidden absolute overflow-hidden md:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[40px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
@@ -67,7 +62,13 @@ const kebabs = reactive([
     </Swiper>
   </section>
 </template>
+<script setup lang="ts">
+const kebabs = reactive([
+  'images/slides/1.png',
+  'images/slides/1.png'
+])
 
+</script>
 <style scoped>
 
 </style>

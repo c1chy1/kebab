@@ -40,7 +40,7 @@ const hamburgers = reactive([
   <section id="menu" class="text-center uppercase flex flex-col">
     <h5 class="text-[22px] text-secondary w-56 mb-7 mx-auto font-bebas font-medium bg-neutral inline-block py-4 px-6">Always Tasty
       Burger</h5>
-    <h2 class="text-[36px] lg:text-[50px] mb-2.5 text-primary leading-tight font-medium font-alfa  ">Choose &amp;
+    <h2 class="section-title ">Choose &amp;
       Enjoy</h2>
     <p class="text-[17px] px-7 text-center font-light lowercase">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -80,7 +80,7 @@ const hamburgers = reactive([
     }"
       >
         <SwiperSlide v-for="slide in hamburgers" :key="slide"
-                     class="hero py-16 lg:pt-36 md:px-12"
+                     class="hero pt-4  md:px-12"
         >
           <div v-if="slide" class="card mx-auto  h-full w-10/12">
             <figure class="px-4 py-4 lg:px-10 lg:py-10 h-1/2">

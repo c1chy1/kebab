@@ -40,6 +40,13 @@ body {
     @apply absolute bottom-0 -left-3  bg-primary flex justify-center items-center w-11 h-11 rounded-full  transition-all
 
   }
+  .section-title {
+
+    font-family: 'Alfa Slab One', sans-serif;
+    @apply text-primary text-center text-[36px] lg:text-[50px] mb-2.5 leading-tight font-medium uppercase
+
+  }
+
 }
 
 [data-theme='dark'] {

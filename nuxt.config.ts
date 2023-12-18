@@ -13,6 +13,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
+
+/*  css: [
+    'lightgallery/scss/lightgallery.scss',
+    'lightgallery/scss/lg-zoom.scss'
+  ],*/
   fontLoader: {
 
     autoImport: true , // enables auto-import feature,
@@ -51,6 +56,7 @@ export default defineNuxtConfig({
         'store','helper'
     ]
   },
+
   runtimeConfig: {
     mongoUrl: process.env.MONGODB_URI,
     jwtSecret: process.env.JWTSECRET,

@@ -20,6 +20,7 @@ const user = useUserStore()
   <LayoutHome/>
   <LayoutMenu/>
   <LayoutEvents/>
+  <LayoutGallery/>
   <AccountFormLogin/>
 
 

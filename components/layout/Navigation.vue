@@ -17,12 +17,12 @@ bg-repeat-round  px-4 md:px-12  font-bebas">
           <h2 class="text-base text-center font-semibold font-mont py-5 tracking-wider transition-all duration-500"  >Call for Delivery +4 450 68 7474</h2>
         </div>
         <ul ref="menu" class="menu menu-horizontal gap-4 px-1 text-[25px] tracking-[4px] relative uppercase transition-all duration-500">
-          <li><nuxt-link href="#header" @click="$scrollTo('#header')" >Home</nuxt-link></li>
-          <li><nuxt-link href="#menu" @click="$scrollTo('#menu')"  >Menu</nuxt-link></li>
-          <li><nuxt-link href="#events" @click="$scrollTo('#events')">Events</nuxt-link></li>
-          <li><nuxt-link href="#reservation" @click="$scrollTo('#reservation')">Reservation</nuxt-link></li>
-          <li><nuxt-link href="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
-          <li><nuxt-link href="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
+          <li><nuxt-link hash="#header" @click="$scrollTo('#header')" >Home</nuxt-link></li>
+          <li><nuxt-link hash="#menu" @click="$scrollTo('#menu')"  >Menu</nuxt-link></li>
+          <li><nuxt-link hash="#events" @click="$scrollTo('#events')">Events</nuxt-link></li>
+          <li><nuxt-link hash="#reservation" @click="$scrollTo('#reservation')">Reservation</nuxt-link></li>
+          <li><nuxt-link hash="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
+          <li><nuxt-link hash="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
 <li>
   <button ref="scrollToTop" @click="$scrollToTop" class="scroll-top-button">
   <ScrollToTop class="fill-white w-4"/>
