@@ -3,7 +3,7 @@
 <template>
   <div id="gallery" class="">
 
-    <h2 class="section-title lg:pt-32 lg:pb-16">Gallery PIZDA</h2>
+    <h2 class="section-title lg:pt-32 lg:pb-16">Gallery</h2>
     <lightgallery class=" max-w-5xl grid grid-cols-4 grid-rows-2 mx-auto"
 
                   :settings="gallerySettings">
