@@ -37,11 +37,10 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section id="menu" class="text-center uppercase flex flex-col">
+  <section id="menu" class=" pt-24 text-center uppercase flex flex-col">
     <h5 class="text-[22px] text-secondary w-56 mb-7 mx-auto font-bebas font-medium bg-neutral inline-block py-4 px-6">Always Tasty
       Burger</h5>
-    <h2 class="section-title ">Choose &amp;
-      Enjoy</h2>
+    <h2 class="section-title ">Choose &amp; Enjoy</h2>
     <p class="text-[17px] px-7 text-center font-light lowercase">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua.

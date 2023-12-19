@@ -45,7 +45,7 @@
 
                   <div class="   xl:text-left  flex flex-col items-start">
               <h3 class=" w-full  py-0  sm:py-1  lg:w-auto   lg:px-4 lg:py-2 mb-4  text-[14px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] ">
-                It is a good time for <br class="sm:hidden"> the great taste of kebabs
+                It is a good time for  the great taste of kebabs
               </h3>
               <h1 class="  text-[48px]   md:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500">
                 Turkish

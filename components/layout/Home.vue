@@ -5,7 +5,7 @@
 <template>
 
 
-  <section class="lg:px-24  lg:py-24 flex flex-col lg:flex-row gap-y-9 lg:gap-y-0  lg:gap-x-10 font-bebas  ">
+  <section class="  px-10 pt-20    lg:px-24  lg:py-24 flex flex-col lg:flex-row gap-y-9 lg:gap-y-0  lg:gap-x-10 font-bebas  ">
     <div class=" w-full lg:w-1/2">
       <AtomsBanner
           src="images/home/1.png"

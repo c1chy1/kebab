@@ -43,6 +43,7 @@ const hamburgers = reactive([
       }"
         :breakpoints="{
         '768': {
+
           //slidesPerView: 4,
           //slidesPerGroup: 4,
         },
@@ -56,8 +57,8 @@ const hamburgers = reactive([
                    class="text-left bg-white"
       >
 
-        <div class=" hero-content items-start max-w-full p-6">
-          <div class=" w-1/2  py-16 pl-12 pr-7">
+        <div class=" hero-content flex-col-reverse lg:items-start lg:max-w-full p-6">
+          <div class=" w-full lg:w-1/2   py-8 lg:py-16 lg:pl-12 lg:pr-7">
 
             <h2 class="text-[29px] text-primary  font-bebas  font-light uppercase ">
               {{ slide.label }}</h2>
@@ -74,12 +75,12 @@ const hamburgers = reactive([
 
           </div>
 
-          <img :src="slide.img" class="w-1/2">
+          <img :src="slide.img" class=" w-full lg:w-1/2">
 
         </div>
 
       </SwiperSlide>
-      <div class="pagination swiper-pagination">
+      <div class="pagination swiper-pagination ">
 
 
       </div>
@@ -91,60 +92,14 @@ const hamburgers = reactive([
 
 <style lang="scss" scoped>
 
-.swiper-pagination {
-  left: 4.5rem;
-  bottom: 4rem;
-  text-align: left;
-}
 
-/*
-
-.sliderWrapper {
-  :global(.swiper-pagination-bullet) {
-    background: red;
-    width: 1rem;
-    height: 1rem;
-    border-radius: .5rem;
-    opacity: 1;
-    position: absolute;
-    left:5rem;
-    bottom: 5rem
-  }
-
-  :global(.swiper-pagination-bullet-active) {
-    background-color: blue;
-    width: 1rem;
-    height: 1rem;
-    border-radius: .5rem;
+@media screen and (min-width: 1024px) {
+  .swiper-pagination  {
+    left: 4.5rem;
+    bottom: 4rem;
+    text-align: left;
   }
 }
-
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: blue;
-  opacity: 1;
-}
-
-!* target all bullets *!
-.swiper-pagination-bullet {
-  background-color: red;
-  opacity: 1;
-}
-.swiper-pagination-bullet-custom {
-
-  width: 230px;
-  height: 230px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0,0,0,0.2);
-}
-.swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
-}
-*/
 
 
 </style>
