@@ -22,6 +22,7 @@ const user = useUserStore()
   <LayoutEvents/>
   <LayoutGallery/>
   <AccountFormLogin/>
+  <LayoutContact/>
 
 
 

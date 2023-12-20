@@ -4,12 +4,10 @@
     <nav ref="image" class="navbar absolute top-0 left-0 w-full z-[0]
 bg-repeat-round  px-4  md:px-0 xl:px-12  font-bebas">
       <div  class="navbar-start flex-row w-full md:w-1/3 py-4 ">
-        <button class="btn-ghost font-bold  text-primary text-4xl uppercase transition-all duration-500">
-
-          <img   src="/logo.png" class="inline-block w-14 h-14 mr-4 stroke-current ">Burger House
-        </button>
-
-
+<AtomsLogo
+    color="Green"
+    label="Burger House"
+    src="/logo.png"/>
       </div>
       <div class="navbar-end hidden lg:flex items-end flex-col w-full text-primary ">
         <div class="flex items-center space-x-5 pt-6 pr-9 ">
