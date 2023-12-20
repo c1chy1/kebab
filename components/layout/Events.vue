@@ -25,7 +25,7 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section id="events" class="lg:px-20 lg:py-24 text-center space-y-6">
+  <section id="events" class="  px-2 pt-16 sm:px-4   md:px-16  lg:px-20 lg:py-24 text-center space-y-6">
     <Swiper
         effect="fade"
         :speed="1000"
@@ -57,7 +57,7 @@ const hamburgers = reactive([
                    class="text-left bg-white"
       >
 
-        <div class=" hero-content flex-col-reverse lg:items-start lg:max-w-full p-6">
+        <div class=" hero-content  flex-col-reverse lg:flex-row lg:items-start lg:max-w-full ">
           <div class=" w-full lg:w-1/2   py-8 lg:py-16 lg:pl-12 lg:pr-7">
 
             <h2 class="text-[29px] text-primary  font-bebas  font-light uppercase ">

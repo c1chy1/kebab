@@ -88,7 +88,7 @@ const hamburgers = reactive([
                   class="z-10"/>
             </figure>
             <div class="card-body items-center text-center h-1/2">
-              <h2 class="card-title text-[38px] text-primary py-4 mb-2.5 font-bebas  font-medium uppercase ">
+              <h2 class="card-title text-[38px] text-primary lg:mb-2.5 font-bebas  font-medium uppercase ">
                 {{slide.title}}</h2>
               <p class="text-[17px]  4 leading-tight font-light lowercase contents">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do</p>

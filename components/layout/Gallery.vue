@@ -17,9 +17,7 @@
             class="w-full "
         />
         <div
-            class="
-
-          absolute
+            class="absolute
           top-0
           left-0
           opacity-0
