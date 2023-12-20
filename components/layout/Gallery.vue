@@ -3,8 +3,8 @@
 <template>
   <div id="gallery" class="">
 
-    <h2 class="section-title lg:pt-32 lg:pb-16">Gallery</h2>
-    <lightgallery class=" max-w-5xl grid grid-cols-4 grid-rows-2 mx-auto"
+    <h2 class="section-title   pt-32 pb-16">Gallery</h2>
+    <lightgallery class="  max-w-sm sm:max-w-2xl px-4  md:max-w-3xl lg:max-w-4xl xl:max-w-6xl  grid  sm:grid-cols-3 sm:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 mx-auto"
 
                   :settings="gallerySettings">
       <a v-for="image in hamburgers"
@@ -60,12 +60,12 @@ const hamburgers = reactive([
 
   },
   {
-    img: 'images/gallery/2.png',
+    img: 'images/gallery/4.png',
     title: 'Hamburger2',
 
   },
   {
-    img: 'images/gallery/4.png',
+    img: 'images/gallery/2.png',
     title: 'Hamburger3',
 
   },
@@ -80,12 +80,12 @@ const hamburgers = reactive([
 
   },
   {
-    img: 'images/gallery/3.png',
+    img: 'images/gallery/1.png',
     title: 'Hamburger6',
   }
   ,
   {
-    img: 'images/gallery/1.png',
+    img: 'images/gallery/3.png',
     title: 'Hamburger6',
   },
   {
