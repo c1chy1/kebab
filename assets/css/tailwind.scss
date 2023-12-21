@@ -23,6 +23,13 @@ body {
     font-family: 'Alfa Slab One', sans-serif;
     @apply mt-6 bg-[#ff6d00] rounded hover:bg-primary border-none uppercase text-center text-[17px] font-medium text-white transition-all ease-out duration-300  inline-block py-4 px-10;
   }
+  .button-logo {
+
+    font-family: "Bebas Neue", sans-serif;
+    @apply btn-ghost  px-2 py-1 lg:px-4 lg:py-2 flex items-center font-bold uppercase transition-all duration-500 rounded-[8px] cursor-pointer
+
+
+  }
   .form-label {
 
     font-family: "Montserrat", sans-serif;
