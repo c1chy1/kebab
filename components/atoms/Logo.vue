@@ -3,8 +3,8 @@
       @click="$scrollToTop"
       class="button-logo"
       :class="buttonClasses">
-    <img   :src="src" class=" mr-4 stroke-current">
-    <span class="text-4xl lg:text-5xl 2xl:text-6xl">
+    <img   :src="src" class=" w-14  lg:w-16 mr-4 stroke-current">
+    <span class="text-3xl lg:text-4xl">
       {{props.label}}</span>
   </button>
 </template>
