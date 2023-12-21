@@ -2,7 +2,7 @@
 <template>
   <header class=" fixed z-10 w-full  " >
     <nav ref="image" class="navbar absolute top-0 left-0 w-full z-[0]
-bg-repeat-round  px-4  md:px-0 xl:px-12  font-bebas">
+bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
       <div  class="navbar-start flex-row w-full md:w-1/3 py-4 ">
 <AtomsLogo
     color="Green"
