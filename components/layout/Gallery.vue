@@ -4,9 +4,9 @@
   <div id="gallery" class="">
 
     <h2 class="section-title   pt-32 pb-16">Gallery</h2>
-    <lightgallery class="  max-w-sm sm:max-w-2xl px-4  md:max-w-3xl lg:max-w-4xl xl:max-w-6xl  grid  sm:grid-cols-3 sm:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 mx-auto"
+    <div ref="gallery" class="max-w-sm sm:max-w-2xl px-4  md:max-w-3xl lg:max-w-4xl xl:max-w-6xl  grid  sm:grid-cols-3 sm:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 mx-auto"
 
-                  :settings="gallerySettings">
+    >
       <a v-for="image in hamburgers"
 
           class="relative cursor-zoom-in img"
@@ -35,21 +35,32 @@
 
         >
 
-           <ButtonSearch class="transition-all duration-500 animate-bounce animate bottom-5"/>
+
+           <AtomsButtonSearch class="transition-all duration-500 animate-bounce animate bottom-5"/>
 
         </div>
       </a>
-    </lightgallery>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Lightgallery from 'lightgallery/vue'
-import lgZoom from 'lightgallery/plugins/zoom'
+
+import Lightgallery from "lightgallery";
+
 import 'lightgallery/scss/lightgallery.scss'
 import 'lightgallery/scss/lg-zoom.scss'
-import ButtonSearch from "~/components/atoms/ButtonSearch.vue";
+const gallery = ref()
 
+function lightGallery() {
+
+  Lightgallery(gallery.value, gallerySettings)
+}
+
+onMounted(()=>{
+
+  lightGallery()
+})
 const hamburgers = reactive([
 
   {
@@ -93,14 +104,11 @@ const hamburgers = reactive([
 ])
 
 const gallerySettings = {
-
   selector: '.img',
   speed: 500,
-  plugins: [lgZoom],
-  mode: 'lg-zoom',
   download: false,
   counter: false,
-  zoom: false
+  zoom: true
 }
 </script>
 

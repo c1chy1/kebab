@@ -13,8 +13,8 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
-
-/*  css: [
+/*
+  css: [
     'lightgallery/scss/lightgallery.scss',
     'lightgallery/scss/lg-zoom.scss'
   ],*/
