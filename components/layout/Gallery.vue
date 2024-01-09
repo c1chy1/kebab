@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="gallery" class="">
 
@@ -47,9 +45,7 @@
 <script lang="ts" setup>
 
 import Lightgallery from "lightgallery";
-
 import 'lightgallery/scss/lightgallery.scss'
-import 'lightgallery/scss/lg-zoom.scss'
 const gallery = ref()
 
 function lightGallery() {
@@ -95,11 +91,11 @@ const hamburgers = reactive([
   ,
   {
     img: 'images/gallery/3.png',
-    title: 'Hamburger6',
+    title: 'Hamburger7',
   },
   {
     img: 'images/gallery/2.png',
-    title: 'Hamburger6',
+    title: 'Hamburger8',
   }
 ])
 
@@ -108,7 +104,6 @@ const gallerySettings = {
   speed: 500,
   download: false,
   counter: false,
-  zoom: true
 }
 </script>
 
