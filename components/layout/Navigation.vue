@@ -25,6 +25,7 @@ bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
           <li><nuxt-link hash="#reservation" @click="$scrollTo('#reservation')">Reservation</nuxt-link></li>
           <li><nuxt-link hash="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
           <li><nuxt-link hash="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
+
 <li>
   <button ref="scrollToTop" @click="$scrollToTop" class="scroll-top-button">
   <ScrollToTop class="fill-white w-4"/>
@@ -33,6 +34,8 @@ bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
         </ul>
       </div>
     </nav>
+
+
 
     <div  ref="navbar" class="nav-bg h-24 lg:h-36  bg-[url('/bg.png')] filter-dark "></div>
   </header>

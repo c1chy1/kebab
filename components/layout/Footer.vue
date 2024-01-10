@@ -23,10 +23,11 @@
 <div class="lg:w-1/2 font-bebas text-2xl place-items-baseline lg:place-items-end pt-20" >
   <div class="py-3 flex items-center uppercase">
     <AtomsIconLocation/>
-    <a class="ml-4 lg:ml-8 text-xl lg:text-3xl text-white hover:text-[#ffc107] transition-all duration-500 cursor-pointer" onclick="address.showModal()">Dammstraße, 22A, Lüdenscheid, Germany</a>
+    <a class="ml-4 lg:ml-8 text-xl lg:text-3xl text-white hover:text-[#ffc107] transition-all duration-500 cursor-pointer"
+       onclick="address.showModal()">Dammstraße, 22A, Lüdenscheid, Germany</a>
     <dialog id="address" class="modal">
-      <div class="modal-box text-dark">
-        <form method="dialog" class="text-dark">
+      <div class="modal-box text-[#3d2514]">
+        <form method="dialog">
           <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
         <h3 class="font-bold text-3xl">Dammstraße, 22A, Lüdenscheid, Germany</h3>

@@ -11,7 +11,7 @@ const user = useUserStore()
 
 <template >
 
-
+  <AtomsMobilMenu/>
   <LayoutNavigation/>
 
 

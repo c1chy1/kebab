@@ -45,10 +45,9 @@ module.exports = {
                 light: {
                     'primary': '#006b00',
                     'secondary': '#ff6d00',
-                    'dark':'#3d2514',
+                    'accent':'#ffc045',
                     'shadow': '#fee7ba',
                     'neutral': '#ffe6d4',
-                    'base-100': '#faf4ed',
                     'info': '#56949f',
                     'success': '#907aa9',
                     'warning': '#ea9d34',
