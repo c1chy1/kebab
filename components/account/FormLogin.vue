@@ -6,7 +6,7 @@ const user = useUserStore()
 </script>
 
 <template >
-  <div class="w-full mx-auto flex flex-col items-center justify-center">
+  <div class="w-full mx-auto flex flex-col items-center justify-center pt-32 pb-32">
   <FormKit
       type="form"
       submit-label="Log in"

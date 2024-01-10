@@ -10,7 +10,7 @@ body {
   font-family: Montserrat, sans-serif;
   line-height: 28px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow: hidden;
   text-rendering: geometricPrecision;
 
 
@@ -26,7 +26,7 @@ body {
   .button-logo {
 
     font-family: "Bebas Neue", sans-serif;
-    @apply btn-ghost  px-2 py-1 lg:px-4 lg:py-2 flex items-center font-bold uppercase transition-all duration-500 rounded-[8px] cursor-pointer
+    @apply btn-ghost  flex items-center font-bold uppercase transition-all duration-500 rounded-[8px] cursor-pointer
 
 
   }

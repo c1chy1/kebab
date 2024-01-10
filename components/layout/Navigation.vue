@@ -7,7 +7,11 @@ bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
 <AtomsLogo
     color="Green"
     label="Burger House"
-    src="/logo.png"/>
+    text-size="text-3xl md:text-4xl"
+    svg-size=" w-14 md:w-16"
+    src="/logo.png"
+    class="space-x-2 md:space-x-4"
+/>
       </div>
       <div class="navbar-end hidden lg:flex items-end flex-col w-full text-primary ">
         <div class="flex items-center space-x-5 pt-6 pr-9 ">

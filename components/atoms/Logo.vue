@@ -3,8 +3,13 @@
       @click="$scrollToTop"
       class="button-logo"
       :class="buttonClasses">
-    <img   :src="src" class=" w-14  lg:w-16 mr-4 stroke-current">
-    <span class="text-3xl lg:text-4xl">
+    <img
+        :src="src"
+        :class="svgSize"
+        class="stroke-current">
+    <span
+    class="tracking-widest"
+        :class="textSize">
       {{props.label}}</span>
   </button>
 </template>
@@ -17,11 +22,12 @@ const props = withDefaults(
     defineProps<{
       label: string;
       color?: 'Green' | 'White',
-      src: String
+      textSize: string,
+      svgSize: string
+      src: string
     }>(),
     {
       color: 'Green',
-
     }
 );
 
