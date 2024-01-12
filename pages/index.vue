@@ -11,11 +11,8 @@ const user = useUserStore()
 
 <template >
 
-  <AtomsMobilMenu/>
+<!--  <AtomsMobilMenu2/>-->
   <LayoutNavigation/>
-
-
-<!--  <LayoutSwiper/>-->
   <LayoutHeader/>
   <LayoutHome/>
   <LayoutMenu/>

@@ -1,6 +1,6 @@
 
 <template>
-  <header class=" fixed z-10 w-full  " >
+  <header class=" fixed z-10 w-full" >
     <nav ref="image" class="navbar absolute top-0 left-0 w-full z-[0]
 bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
       <div  class="navbar-start flex-row w-full md:w-1/3 py-4 ">
@@ -32,11 +32,13 @@ bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
   </button>
 </li>
         </ul>
+
+
       </div>
+
+
     </nav>
-
-
-
+    <LayoutMobilNav/>
     <div  ref="navbar" class="nav-bg h-24 lg:h-36  bg-[url('/bg.png')] filter-dark "></div>
   </header>
 </template>
