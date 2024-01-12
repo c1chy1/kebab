@@ -2,15 +2,15 @@
   <nav class="lg:hidden z-[1000]">
     <div @click="toggle()"
          :class="open ? 'open' : ''"
-         class=" w-8 h-4 md:w-8 md:h-8 right-8 absolute"
+         class=" w-6 h-4 sm:w-7 md:w-8 md:h-8 right-8 absolute"
          id="hamburger" >
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="top-1"></span>
+      <span class="top-3"></span>
+      <span class="top-5"></span>
     </div>
 
-    <div ref="menu" class="  menu-mobile fixed right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
-      <div ref="bgMenu" class=" px-4 bg-menu-mobile bg-accent" id="bg-menu-mobile">
+    <div ref="menu" class="  menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
+      <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent" id="bg-menu-mobile">
 
         <div class="flex py-4 text-primary ">
           <AtomsLogo
@@ -53,16 +53,15 @@ const width = ref()
 
 function toggle() {
 
-  open.value = !open.value
-
   if (process.client) {
 
     width.value = window.innerWidth
 
   }
   if (estado === 0) {
-    gsap.to('.bg-menu-mobile', 1, {
+    gsap.to('.bg-menu-mobile', 0.7, {
       x:-width.value,
+
       ease: "expo.easeInOut"
     });
 
@@ -88,12 +87,8 @@ function toggle() {
         }
     );
 
-    gsap.to('.menu-mobile li', 1, {
+    gsap.to('.menu-mobile li', 0.7, {
           x:0,
-          /*
-          x:vw,
-          scaleX: 2.3,
-          */
           duration: 0.5,
           stagger: 0.04,
           ease: "expo.easeInOut"
@@ -117,11 +112,9 @@ function toggle() {
 
 #bg-menu-mobile {
   width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
   right: -100%;
-
   will-change: transform;
 }
 
@@ -163,7 +156,6 @@ img {
 }
 
 #hamburger:hover span:nth-child(1) {
-  top: -4px;
   -webkit-transition: .20s ease-in-out;
   -moz-transition: .20s ease-in-out;
   -o-transition: .20s ease-in-out;
@@ -171,7 +163,6 @@ img {
 }
 
 #hamburger:hover span:nth-child(3) {
-  top: 34px;
   -webkit-transition: .16s ease-in-out;
   -moz-transition: .16s ease-in-out;
   -o-transition: .16s ease-in-out;
@@ -198,17 +189,6 @@ img {
   transition: .25s ease-in-out;
 }
 
-#hamburger span:nth-child(1) {
-  top: 0px;
-}
-
-#hamburger span:nth-child(2) {
-  top: 14px;
-}
-
-#hamburger span:nth-child(3) {
-  top: 28px;
-}
 
 #hamburger.open span:nth-child(1) {
   top: 14px;
@@ -216,7 +196,6 @@ img {
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
-  background-color: #fff;
 }
 
 #hamburger.open span:nth-child(2) {
@@ -234,6 +213,5 @@ img {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
-  background-color: #fff;
 }
 </style>

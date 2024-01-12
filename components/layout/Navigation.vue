@@ -32,10 +32,7 @@ bg-repeat-round  px-4  md:px-8 xl:px-12  font-bebas">
   </button>
 </li>
         </ul>
-
-
       </div>
-
 
     </nav>
     <LayoutMobilNav/>

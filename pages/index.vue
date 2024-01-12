@@ -10,8 +10,6 @@ const user = useUserStore()
 </script>
 
 <template >
-
-<!--  <AtomsMobilMenu2/>-->
   <LayoutNavigation/>
   <LayoutHeader/>
   <LayoutHome/>
@@ -20,8 +18,4 @@ const user = useUserStore()
   <LayoutGallery/>
   <AccountFormLogin/>
   <LayoutFooter/>
-
-
-
-
 </template>
