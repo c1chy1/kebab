@@ -4,9 +4,9 @@
          :class="open ? 'open' : ''"
          class=" w-6 h-4 sm:w-7 md:w-8 md:h-8 right-8 absolute"
          id="hamburger" >
-      <span class="top-1"></span>
-      <span class="top-3"></span>
-      <span class="top-5"></span>
+      <span class="top-1  bg-[#3d2514]"></span>
+      <span class="top-3  bg-[#3d2514]"></span>
+      <span class="top-5  bg-[#3d2514]"></span>
     </div>
 
     <div ref="menu" class="  menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
@@ -132,18 +132,6 @@ ul li {
   will-change: transform;
 }
 
-ul li:hover {
-  color: #111;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-
-img {
-  max-width: 100%
-}
-
-
 /* hang burger */
 
 #hamburger {
@@ -175,7 +163,6 @@ img {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #111;
   border-radius: 5px;
   opacity: 1;
   left: 0;
