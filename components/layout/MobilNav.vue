@@ -53,6 +53,9 @@ const width = ref()
 
 function toggle() {
 
+        open.value = !open.value
+
+
   if (process.client) {
 
     width.value = window.innerWidth
@@ -81,25 +84,22 @@ function toggle() {
   } else {
     estado = 0;
     gsap.to('.bg-menu-mobile', 1.2, {
-          x:0,
-          delay:0.2,
+          x: 0,
+          delay: 0.2,
           ease: "Expo.easeInOut"
         }
     );
 
     gsap.to('.menu-mobile li', 0.7, {
-          x:0,
+          x: 0,
           duration: 0.5,
           stagger: 0.04,
           ease: "expo.easeInOut"
         },
-
-
     );
+  }}
 
-  }
 
-}
 
 
 
