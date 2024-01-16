@@ -7,7 +7,7 @@
               :modules="[SwiperAutoplay, SwiperEffectCreative]"
               :slides-per-view="1"
               :loop="true"
-              :speed="10000000"
+              :speed="1000"
               :effect="'creative'"
               :autoplay="{
       delay: 4000,
