@@ -1,13 +1,13 @@
 <template>
-  <section id="header" class=" relative bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
+  <section id="header" class="flex bg-[url('/bg.png')]  bg-no-repeat bg-center bg-cover h-screen z-1">
 
     <Swiper
 
-              class="flex md:block h-screen  background-dark transition-all duration-500"
+              class=" md:block h-screen  background-dark transition-all duration-500"
               :modules="[SwiperAutoplay, SwiperEffectCreative]"
               :slides-per-view="1"
               :loop="true"
-              :speed="1000"
+              :speed="1000000"
               :effect="'creative'"
               :autoplay="{
       delay: 4000,
@@ -24,17 +24,18 @@
     }"
           >
             <SwiperSlide v-for="slide in kebabs" :key="slide"
-                         class="hero   pt-12  md:pt-0 lg:pt-36 lg:px-12 "
+                         class="hero  px-4 lg:px-12 "
             >
               <div v-if="slide">
                 <div
-                    class="relative flex flex-col items-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
+                    class=" h-screen  flex flex-col items-center justify-center text-center lg:text-left lg:justify-between   lg:flex-row-reverse uppercase "
                 >
 
-
+<div class="relative">
                   <img
-                    :src="slide" class="logo-box w-3/5 md:w-1/2 object-scale-down"/>
-            <div class="hidden absolute overflow-hidden md:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[100px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
+                    :src="slide" class="relative logo-box w-full xl:w-full object-scale-down"/>
+</div>
+            <div class="hidden absolute overflow-hidden lg:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] xl:top-[200px]  xl:right-[120px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
             <article
                       class="relative flex flex-col items-center justify-center w-full h-full p-[10px] text-[30px]  md:text-[60px]  md:leading-[80px] border-2 border-dashed border-white  rounded-full text-white font-base font-bebas  transform rotate-[20deg]">
