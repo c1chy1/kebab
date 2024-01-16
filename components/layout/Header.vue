@@ -24,7 +24,7 @@
     }"
           >
             <SwiperSlide v-for="slide in kebabs" :key="slide"
-                         class="hero   pt-16 lg:pt-36 md:px-12 "
+                         class="hero   pt-0 lg:pt-36 md:px-12 "
             >
               <div v-if="slide">
                 <div
