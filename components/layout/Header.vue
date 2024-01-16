@@ -7,7 +7,7 @@
               :modules="[SwiperAutoplay, SwiperEffectCreative]"
               :slides-per-view="1"
               :loop="true"
-              :speed="1000"
+              :speed="10000000"
               :effect="'creative'"
               :autoplay="{
       delay: 4000,
@@ -33,7 +33,7 @@
 
 <div>
                   <img
-                    :src="slide" class=" logo-box w-full object-scale-down"/>
+                    :src="slide" class=" logo-box mx-auto w-3/4  xl:w-full object-scale-down"/>
 
             <div class="hidden absolute overflow-hidden xl:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] xl:bottom-[200px]  xl:right-[120px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
@@ -44,11 +44,11 @@
             </div>
 </div>
 
-                  <div class="  w-1/2  xl:text-left  flex flex-col items-start">
-              <h3 class=" w-full  py-0  sm:py-1  lg:w-auto   lg:px-4 lg:py-2 mb-4  text-[14px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] ">
+                  <div class=" max-w-full lg:w-1/2 xl:text-left  flex flex-col items-center lg:items-start">
+              <h3 class=" w-full  py-0  sm:py-1  lg:w-auto  px-1  lg:px-4 lg:py-2 mb-4  text-[14px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] ">
                 It is a good time for  the great taste of kebabs
               </h3>
-              <h1 class="  text-[48px]   md:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500">
+              <h1 class="  text-[38px]  lg:text-[48px]   xl:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500">
                 Turkish
                 <span class="text-[28px] md:text-[46px] pt-4">Kebab</span>
               </h1>
