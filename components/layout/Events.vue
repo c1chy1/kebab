@@ -25,7 +25,7 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section id="events" class="  px-2 pt-16 sm:px-4   md:px-16  lg:px-20 lg:py-24 text-center space-y-6">
+  <section id="events" class="  px-2 pt-28 lg:pt-40 sm:px-4   md:px-16  lg:px-20 lg:py-24 text-center space-y-6">
     <Swiper
         effect="fade"
         :speed="1000"
@@ -66,7 +66,7 @@ const hamburgers = reactive([
               {{ slide.title }}
             </h2>
 
-            <p class=" text-[21px] leading-8 py-6">
+            <p class="  xl:text-[21px] xl:leading-8 py-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.
               Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.

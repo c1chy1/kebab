@@ -7,7 +7,7 @@
   opacity-95  pl-4  pr-6 lg:pl-12 lg:pr-20
 "
 >
-<nav class="footer flex flex-col lg:flex-row items-end lg:items-center">
+<nav class="footer pt-8 xl:pt-0 flex flex-col gap-4 lg:flex-row items-end lg:items-center">
 
 <div class="lg:w-1/2 pt-20 ">
   <AtomsLogo color="White"
@@ -20,7 +20,7 @@
 <p class="text-white text-[17px]  leading-normal pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viver ra maecenas accumsan lacus vel facilisis.</p>
 
 </div>
-<div class="lg:w-1/2 font-bebas text-2xl place-items-baseline lg:place-items-end pt-20" >
+<div class="lg:w-1/2 font-bebas text-2xl place-items-baseline xl:place-items-end pt-20" >
   <div class="py-3 flex items-center uppercase">
     <AtomsIconLocation/>
     <a class="ml-4 lg:ml-8 text-xl lg:text-3xl text-white hover:text-[#ffc107] transition-all duration-500 cursor-pointer"

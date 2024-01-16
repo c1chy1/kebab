@@ -34,7 +34,7 @@
 
                   <img
                     :src="slide" class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
-            <div class="hidden absolute overflow-hidden md:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[40px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
+            <div class="hidden absolute overflow-hidden md:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[100px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
             <article
                       class="relative flex flex-col items-center justify-center w-full h-full p-[10px] text-[30px]  md:text-[60px]  md:leading-[80px] border-2 border-dashed border-white  rounded-full text-white font-base font-bebas  transform rotate-[20deg]">

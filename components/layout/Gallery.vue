@@ -1,7 +1,7 @@
 <template>
   <div id="gallery" class="">
 
-    <h2 class="section-title   pt-32 pb-16">Gallery</h2>
+    <h2 class="section-title  pt-28  lg:pt-44 lg:pb-8 xl:pb-16">Gallery</h2>
     <div ref="gallery" class="max-w-sm sm:max-w-2xl px-4  md:max-w-3xl lg:max-w-4xl xl:max-w-6xl  grid  sm:grid-cols-3 sm:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 mx-auto"
 
     >

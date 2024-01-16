@@ -20,7 +20,7 @@ const {$scrollToTop}  = useNuxtApp()
 
 const props = withDefaults(
     defineProps<{
-      label: string;
+      label?: string;
       color?: 'Green' | 'White',
       textSize: string,
       svgSize: string

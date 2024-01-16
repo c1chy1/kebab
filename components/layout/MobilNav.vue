@@ -1,8 +1,8 @@
 <template>
-  <nav class="lg:hidden z-[1000]">
+  <nav class="lg:hidden z-100">
     <div @click="toggle()"
          :class="open ? 'open' : ''"
-         class=" w-6 h-4 sm:w-7 md:w-8 md:h-8 right-8 absolute"
+         class=" w-6 h-4 sm:w-7 md:w-8 md:h-8 top-8 right-8 absolute"
          id="hamburger" >
       <span class="top-1  bg-[#3d2514]"></span>
       <span class="top-3  bg-[#3d2514]"></span>
@@ -135,11 +135,8 @@ ul li {
 /* hang burger */
 
 #hamburger {
-
-  margin: 40px auto;
   cursor: pointer;
 
-  top: 0;
   background-color: transparent;
 }
 
