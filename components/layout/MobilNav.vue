@@ -12,7 +12,7 @@
     <div ref="menu" class="  menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
       <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent" id="bg-menu-mobile">
 
-        <div class="flex py-4 text-primary ">
+        <div class="flex py-3 text-primary ">
           <AtomsLogo
               color="Green"
               text-size="text-3xl md:text-4xl"
@@ -27,11 +27,11 @@
                target="_blank">+4 450 68 7474</a>
           </div>
         </div>
-        <ul class="space-y-3 w-full fixed">
+        <ul class="space-y-2  w-full fixed">
           <li><nuxt-link hash="#header" @click="toggle();$scrollTo('#header')" >Home</nuxt-link></li>
           <li><nuxt-link hash="#menu" @click="toggle();$scrollTo('#menu')"  >Menu</nuxt-link></li>
           <li><nuxt-link hash="#events" @click="toggle();$scrollTo('#events')">Events</nuxt-link></li>
-          <li><nuxt-link hash="#reservation" @click="toggle();$scrollTo('#reservation')">Reservation</nuxt-link></li>
+          <li><nuxt-link hash="#register" @click="toggle();$scrollTo('#register')">Register</nuxt-link></li>
           <li><nuxt-link hash="#gallery" @click="toggle();$scrollTo('#gallery')">Gallery</nuxt-link></li>
           <li><nuxt-link hash="#contact" @click="toggle();$scrollTo('#contact')">Contact Us</nuxt-link></li>
         </ul>
