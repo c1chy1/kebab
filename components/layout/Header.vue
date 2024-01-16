@@ -24,7 +24,7 @@
     }"
           >
             <SwiperSlide v-for="slide in kebabs" :key="slide"
-                         class="hero   pt-0 lg:pt-36 md:px-12 "
+                         class="hero   pt-12  md:pt-0 lg:pt-36 lg:px-12 "
             >
               <div v-if="slide">
                 <div
@@ -33,7 +33,7 @@
 
 
                   <img
-                    :src="slide" class="logo-box w-4/5 md:w-1/2 object-scale-down"/>
+                    :src="slide" class="logo-box w-3/5 md:w-1/2 object-scale-down"/>
             <div class="hidden absolute overflow-hidden md:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] top-[100px]  md:bottom-[80px] md:right-[90px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
 
             <article

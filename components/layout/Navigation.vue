@@ -1,9 +1,9 @@
 
 <template>
-  <header class=" fixed z-10 w-full" >
-    <nav ref="image" class="navbar absolute top-0 left-0 w-full z-[0]
+  <header class=" fixed z-50 w-full" >
+    <nav ref="image" class="navbar  w-full z-[0]
 bg-repeat-round  px-4  xl:px-12  font-bebas">
-      <div  class="navbar-start flex-row w-full md:w-1/3 py-4 ">
+      <div class="navbar-start  flex-row py-4 w-1/2 lg:w-1/4">
 <AtomsLogo
     color="Green"
     label="Burger House"
@@ -13,16 +13,16 @@ bg-repeat-round  px-4  xl:px-12  font-bebas">
     class="space-x-2 xl:space-x-4"
 />
       </div>
-      <div class="navbar-end lg:flex items-end flex-col w-full text-primary ">
+      <div class="navbar-end lg:flex items-end flex-col  text-primary  w-3/4">
         <div class="hidden sm:flex items-center pr-20 space-x-5 lg:pt-6 lg:pr-9 ">
           <img class="animate-shake delay-500" src="/delivery-icon.png" >
           <h2 class="text-base text-center font-semibold font-mont py-5 tracking-wider transition-all duration-500"  >Call for Delivery +4 450 68 7474</h2>
         </div>
-        <ul ref="menu" class="menu menu-horizontal  hidden lg:flex gap-4 px-1 lg:text-[18px] xl:text-[25px] tracking-[3px] xl:tracking-[4px] relative uppercase transition-all duration-500">
+        <ul ref="menu" class="menu menu-horizontal  hidden lg:flex justify-end gap-4 px-1 lg:text-[18px] xl:text-[25px] tracking-[3px] xl:tracking-[4px] relative uppercase transition-all duration-500">
           <li><nuxt-link hash="#header" @click="$scrollTo('#header')" >Home</nuxt-link></li>
           <li><nuxt-link hash="#menu" @click="$scrollTo('#menu')"  >Menu</nuxt-link></li>
           <li><nuxt-link hash="#events" @click="$scrollTo('#events')">Events</nuxt-link></li>
-          <li><nuxt-link hash="#reservation" @click="$scrollTo('#reservation')">Reservation</nuxt-link></li>
+          <li><nuxt-link hash="#reservation" @click="$scrollTo('#register')">Register</nuxt-link></li>
           <li><nuxt-link hash="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
           <li><nuxt-link hash="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
 
