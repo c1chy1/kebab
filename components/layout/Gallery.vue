@@ -29,12 +29,8 @@
           bg-black/50
           hover:opacity-80
   hover:bg-primary/80
-"
-
-        >
-
-
-           <AtomsButtonSearch class="transition-all duration-500 animate-bounce animate bottom-5"/>
+">
+          <AtomsButtonSearch class="transition-all duration-500 animate-bounce animate bottom-5"/>
 
         </div>
       </a>

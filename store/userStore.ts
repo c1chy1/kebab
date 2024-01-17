@@ -1,12 +1,8 @@
 import { defineStore } from "pinia"
 import { register , logOutUser , login , getUser} from "~/composables/useApi";
-import type {UserRequestBody , signUpReq} from "~/types/user";
-import checkError from "~/utils/checkError";
+import type {logInReq,signUpReq,logoutReq, getUserRes} from '~/types/user'
 
 import {toast} from 'vue3-toastify'
-
-type logInReq = Pick<signUpReq, 'email' | 'password'>
-
 
 
 export const useUserStore = defineStore('User', {
@@ -20,7 +16,7 @@ export const useUserStore = defineStore('User', {
     actions: {
 
 
-        async login(body: any) {
+        async login(body: logInReq) {
             const { success, message } = await login(body)
             if (success) {
                 const token = useCookie('token')
@@ -34,7 +30,7 @@ export const useUserStore = defineStore('User', {
         },
 
 
-        async register(body : any) {
+        async register(body : signUpReq) {
 
             const { success, message } = await register(body)
 

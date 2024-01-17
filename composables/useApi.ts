@@ -36,9 +36,6 @@ const useApi = async function (url: string, body: Record<string, any> = {}): Pro
         })
 }
 
-// Log In & Sign Up & Log out
-
-
 export async function login(body: logInReq) {
     return await useApi('/auth/login', body)
 }
