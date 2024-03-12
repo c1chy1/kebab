@@ -10,9 +10,11 @@
           class="relative cursor-zoom-in img"
           :href="image.img"
       >
-        <img
+        <nuxt-img
+            loading="lazy"
+            format="webp"
             :src="image.img"
-            class="w-full "
+            class="w-full"
         />
         <div
             class="absolute

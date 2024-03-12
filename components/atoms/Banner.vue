@@ -7,15 +7,17 @@
 
 </div>
 
-        <img :src="src"
+        <nuxt-img
+            loading="lazy"
+            format="webp"
+            :src="src"
              class="
              w-full
              hover:scale-105
              transition
              duration-500
              cursor-pointer
-             object-cover">
-
+             object-cover"/>
 </article>
 
 

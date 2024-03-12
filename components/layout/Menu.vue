@@ -1,5 +1,5 @@
 <template>
-  <section id="menu" class="pt-28   lg:pt-40  text-center uppercase flex flex-col">
+  <section id="menu" class="pt-28 lg:pt-40  text-center uppercase flex flex-col">
     <h5 class="text-[22px] text-secondary w-56 mb-7 mx-auto font-bebas font-medium bg-neutral inline-block py-4 px-6">
       Always Tasty
       Burger</h5>
@@ -45,7 +45,7 @@
 
       }
     }">
-        <SwiperSlide v-for="(slide,index) in product.hamburgers" :key="slide"
+        <SwiperSlide v-for="(slide) in product.hamburgers" :key="slide"
 
                      class="hero pt-4 md:px-12"
         ><div v-if="slide"

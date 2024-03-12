@@ -10,6 +10,7 @@ bg-repeat-round  px-4  xl:px-12  font-bebas">
     text-size="   text-2xl xl:text-4xl"
     svg-size=" w-10 lg:w-12 xl:w-16"
     src="/logo.png"
+    format="webp"
     class="space-x-2 xl:space-x-4"
 />
       </div>

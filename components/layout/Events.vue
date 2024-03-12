@@ -25,7 +25,7 @@ const hamburgers = reactive([
 </script>
 
 <template>
-  <section id="events" class="  px-2 pt-28 lg:pt-40 sm:px-4   md:px-16  lg:px-20 lg:py-24 text-center space-y-6">
+  <section id="events" class="px-2 pt-28 lg:pt-40 sm:px-4   md:px-16  lg:px-20 lg:py-24 text-center space-y-6">
     <Swiper
         effect="fade"
         :speed="1000"
@@ -75,7 +75,11 @@ const hamburgers = reactive([
 
           </div>
 
-          <img :src="slide.img" class=" w-full lg:w-1/2">
+          <nuxt-img
+              loading="lazy"
+              format="webp"
+              :src="slide.img"
+              class=" w-full lg:w-1/2"/>
 
         </div>
 

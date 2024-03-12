@@ -3,10 +3,13 @@
       @click="$scrollToTop"
       class="button-logo"
       :class="buttonClasses">
-    <img
+    <nuxt-img
+        preload
         :src="src"
+        format="webp"
         :class="svgSize"
         class="stroke-current">
+    </nuxt-img>
     <span
     class="tracking-widest"
         :class="textSize">
