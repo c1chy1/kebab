@@ -1,8 +1,6 @@
 
 import User from "~/server/db/models/user"
 
-import {setToken,getToken} from "~/helper/localStorage.helper"
-
 
 export default defineEventHandler(async (event) => {
     try {

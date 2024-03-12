@@ -88,7 +88,7 @@
 </template>
 <script setup lang="ts">
 
-import {ProductStore} from "~/store/productStore";
+import {ProductStore} from "@/store/productStore";
 
 
 const product = ProductStore()
