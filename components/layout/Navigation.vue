@@ -43,8 +43,15 @@ bg-repeat-round  px-4  xl:px-12  font-bebas">
 
 
 <script setup lang="ts">
+
 import gsap from 'gsap'
+const { $gsap } = useNuxtApp()
+
+
+
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import ScrollToTop from "~/components/atoms/ScrollToTop.vue";
 const {$scrollToTop , $scrollTo }  = useNuxtApp()
 
@@ -55,8 +62,6 @@ const scrollToTop = ref()
 
 
 onMounted(()=> {
-
-
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +79,7 @@ onMounted(()=> {
     yPercent : 0
   })
 
-  const tl = gsap.timeline({
+  const tl = $gsap.timeline({
     scrollTrigger : {
       start : 'top+=50',
       end: 'top+=100',

@@ -42,8 +42,7 @@
 </template>
 
 <script setup lang="ts">
-
-import {gsap} from 'gsap'
+const { $gsap } = useNuxtApp()
 const {$scrollTo}  = useNuxtApp()
 
 let open = ref(false)
@@ -62,7 +61,7 @@ function toggle() {
 
   }
   if (estado === 0) {
-    gsap.to('.bg-menu-mobile', 0.7, {
+    $gsap.to('.bg-menu-mobile', 0.7, {
       x:-width.value,
 
       ease: "expo.easeInOut"
@@ -71,7 +70,7 @@ function toggle() {
     console.log(width.value)
 
 
-    gsap.to('.menu-mobile li', 1.2, {
+    $gsap.to('.menu-mobile li', 1.2, {
       x:-width.value,
       scaleX: 1,
       duration: 0.5,
@@ -83,14 +82,14 @@ function toggle() {
     estado = 1;
   } else {
     estado = 0;
-    gsap.to('.bg-menu-mobile', 1.2, {
+    $gsap.to('.bg-menu-mobile', 1.2, {
           x: 0,
           delay: 0.2,
           ease: "Expo.easeInOut"
         }
     );
 
-    gsap.to('.menu-mobile li', 0.7, {
+    $gsap.to('.menu-mobile li', 0.7, {
           x: 0,
           duration: 0.5,
           stagger: 0.04,

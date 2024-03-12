@@ -10,12 +10,19 @@ const user = useUserStore()
 </script>
 
 <template >
+
+<!--  <Test/>-->
+
   <LayoutNavigation/>
+<!--  <ShopCart/>-->
   <LayoutHeader/>
   <LayoutHome/>
-  <LayoutMenu/>
+
+<!--  <LayoutMenu/>-->
   <LayoutEvents/>
   <LayoutGallery/>
   <AccountFormLogin/>
   <LayoutFooter/>
+
+
 </template>
