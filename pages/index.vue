@@ -11,9 +11,11 @@ const user = useUserStore()
 
 <template >
 
+
   <LayoutNavigation/>
   <LayoutHeader/>
   <LayoutHome/>
+  <LayoutMenu/>
   <LayoutEvents/>
   <LayoutGallery/>
   <AccountFormLogin/>

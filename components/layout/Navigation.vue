@@ -22,8 +22,8 @@ bg-repeat-round  px-4  xl:px-12  font-bebas">
           <li><nuxt-link hash="#header" @click="$scrollTo('#header')" >Home</nuxt-link></li>
           <li><nuxt-link hash="#menu" @click="$scrollTo('#menu')"  >Menu</nuxt-link></li>
           <li><nuxt-link hash="#events" @click="$scrollTo('#events')">Events</nuxt-link></li>
-          <li><nuxt-link hash="#register" @click="$scrollTo('#register')">Register</nuxt-link></li>
           <li><nuxt-link hash="#gallery" @click="$scrollTo('#gallery')">Gallery</nuxt-link></li>
+          <li><nuxt-link hash="#register" @click="$scrollTo('#register')">Register</nuxt-link></li>
           <li><nuxt-link hash="#contact" @click="$scrollTo('#contact')">Contact Us</nuxt-link></li>
 
 <li>
