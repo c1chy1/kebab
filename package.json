@@ -12,14 +12,14 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/tailwindcss": "^6.10.3",
-    "daisyui": "^4.5.0",
-    "mongoose": "^8.0.3",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "daisyui": "^4.7.3",
+    "mongoose": "^8.2.1",
     "mongoose-bcrypt": "^1.11.0",
-    "nuxt": "^3.9.1",
+    "nuxt": "^3.10.3",
     "nuxt-font-loader": "^2.3.5",
-    "sass": "^1.69.4",
-    "vite-plugin-node-polyfills": "^0.15.0"
+    "sass": "^1.71.1",
+    "vite-plugin-node-polyfills": "^0.21.0"
   },
   "dependencies": {
     "@formkit/nuxt": "^1.6.0",
