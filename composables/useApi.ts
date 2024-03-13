@@ -1,7 +1,7 @@
 
 import type {logInReq,signUpReq,logoutReq, getUserRes} from '~/types/user'
 
-/*import {toast} from 'vue3-toastify'*/
+import {toast} from 'vue3-toastify'
 const useApi = async function (url: string, body: Record<string, any> = {}): Promise<any> {
     const origin = useRequestURL().origin
     return useFetch(url, {
@@ -19,7 +19,7 @@ const useApi = async function (url: string, body: Record<string, any> = {}): Pro
             const data: any = res.data.value
             const error = res.error.value
             if (data) {                if (data.error)
-              /*      toast.error(data.error.message)*/
+                    toast.error(data.error.message)
 
                 return data
             }

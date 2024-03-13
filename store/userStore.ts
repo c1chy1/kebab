@@ -2,7 +2,7 @@ import { defineStore } from "pinia"
 import { register , logOutUser , login , getUser} from "~/composables/useApi";
 import type {logInReq,signUpReq,logoutReq, getUserRes} from '~/types/user'
 
-/*import {toast} from 'vue3-toastify'*/
+import {toast} from 'vue3-toastify'
 
 
 export const useUserStore = defineStore('User', {
@@ -44,7 +44,7 @@ export const useUserStore = defineStore('User', {
                 useRouter().push('/account')
 
             } else {
-          /*   toast.error(message)*/
+             toast.error(message)
             }
 
         },
