@@ -50,8 +50,8 @@ export default defineNuxtConfig({
         plugins: ["@/server/db/index.js"],
         prerender: {
             routes: [
-                "/logo.png",
-                "/images/slides/1.png"
+                "logo.png",
+                "images/slides/1.png"
             ],
         },
     },
