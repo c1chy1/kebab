@@ -47,13 +47,7 @@ export default defineNuxtConfig({
         format: ["webp"],
     },
     nitro: {
-        plugins: ["@/server/db/index.js"],
-        prerender: {
-            routes: [
-                "logo.png",
-                "images/slides/1.png"
-            ],
-        },
+        plugins: ["@/server/db/index.js"]
     },
     imports: {
         dirs: [
