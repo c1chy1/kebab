@@ -52,7 +52,7 @@
                :class="'card-'+ slide.title"
                class="card transition-all mx-auto  h-full w-10/12"
                ref="box">
-            <figure class="px-4 py-4 lg:px-10 2xl:py-10 h-full">
+            <figure class="px-4 py-4 lg:px-10 2xl:py-10 h-full cursor-grab active:cursor-grabbing">
               <AtomsMenuImage
                   :src="slide.img"/>
             </figure>

@@ -26,9 +26,10 @@ const UserSchema = new mongoose.Schema({
 
         statics: {
             async findByCredentials(email: string, password: string): Promise<any> {
-                // 根據 account 至資料庫找尋該用戶資料
-                const user = await User.findOne({ email })
-                // 沒找到該用戶時，丟出錯誤訊息
+                const user
+
+                    = await User.findOne({ email })
+
 /*
 
                 if (user)
@@ -40,10 +41,8 @@ const UserSchema = new mongoose.Schema({
                 // 透過 bcrypt 驗證密碼
                 const isMatch = await bcrypt.compare(password, user.password!)
 
-                // 驗證失敗時，丟出錯誤訊息
                 if (!isMatch)
                     throw new Error('Password is incorrect!')
-                // 驗證成功時，回傳該用戶完整資料
                 return user
             },
 
@@ -80,6 +79,7 @@ const UserSchema = new mongoose.Schema({
                 const token = jwt.sign({ _id: user._id.toString() }, useRuntimeConfig().jwtSecret)
                 // 將該 token 存入資料庫中：
                 await user.save()
+
                 // 回傳 JWT
                 return token
             },

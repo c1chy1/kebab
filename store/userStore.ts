@@ -24,7 +24,10 @@ export const useUserStore = defineStore('User', {
                 setToken(message.token)
                 this.isLoggedIn = true
                 this.userInfo = message.user
-                useRouter().push('/account')
+                console.log(token)
+
+
+            /*    useRouter().push('/account')*/
 
             }
         },
@@ -41,12 +44,20 @@ export const useUserStore = defineStore('User', {
                 this.userInfo = message.user
                 this.isLoggedIn = true
                 this.userInfo = message.user
-                useRouter().push('/account')
 
             } else {
              toast.error(message)
             }
 
+        },
+
+        async getToken() {
+            const token = useCookie('token')
+
+        if(token)    this.isLoggedIn = true
+            if (process.client) {
+                return localStorage.getItem('token')
+            }
         },
 
         async getUser() {

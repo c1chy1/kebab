@@ -1,6 +1,6 @@
 
 <template>
-  <header class=" fixed z-50 w-full" >
+  <header class="fixed z-50 w-full" >
     <nav ref="image" class="navbar  w-full z-[0]
 bg-repeat-round  px-4  xl:px-12  font-bebas">
       <div class="navbar-start  flex-row py-4 w-1/2 lg:w-1/4">
@@ -47,12 +47,7 @@ bg-repeat-round  px-4  xl:px-12  font-bebas">
 
 import gsap from 'gsap'
 const { $gsap } = useNuxtApp()
-
-
-
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import ScrollToTop from "~/components/atoms/ScrollToTop.vue";
 const {$scrollToTop , $scrollTo }  = useNuxtApp()
 

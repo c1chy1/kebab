@@ -11,16 +11,11 @@ export default defineEventHandler(async (event) => {
         const user = await User.findOne(
             { email: userData.email },
         )
-
         const token = await user!.generateAuthToken()
+        setCookie(event, 'token', token, {
+            expires: new Date(Date.now()  + (24 * 60 * 60 * 1000 * 100))
+        })
 
-
-        setCookie(event, 'token', token)
-/*
-        setToken(token)
-
-      const test =  getToken()
-*/
 
 
         return {

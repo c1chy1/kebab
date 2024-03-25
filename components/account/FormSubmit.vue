@@ -12,9 +12,7 @@ const user = useUserStore()
       type="form"
       submit-label="Register"
       :submit-attrs="{
-      inputClass: 'button-orange flex justify-center mx-auto',
-
-    }"
+      inputClass: 'button-orange flex justify-center mx-auto'}"
       @submit="user.register"
       #default="{ value }"
   >

@@ -47,7 +47,7 @@ export default defineNuxtConfig({
         format: ["webp"],
     },
     nitro: {
-        plugins: ["@/server/db/index.js"]
+        plugins: ["plugins/mongodb.ts"]
     },
     imports: {
         dirs: [

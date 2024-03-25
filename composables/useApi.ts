@@ -41,3 +41,5 @@ export async function logOutUser(body: logoutReq) {
 export async function getUser(): Promise<getUserRes> {
     return await useApi('/user/getUser')
 }
+
+

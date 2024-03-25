@@ -21,8 +21,6 @@ export default defineEventHandler(async (event) => {
             maxAge:24*60*60*1000 //1day
         })
 
-   /*     const token = await user.generateAuthToken()*/
-
         return {
             success:  true,
             message: {

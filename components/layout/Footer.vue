@@ -10,12 +10,13 @@
 <nav class="footer pt-8 xl:pt-0 flex flex-col gap-4 lg:flex-row items-end lg:items-center">
 
 <div class="lg:w-1/2 pt-20 ">
-  <AtomsLogo color="White"
+  <AtomsLogo
+             color="White"
              label="Burger House"
              text-size="text-4xl lg:text-6xl"
              svg-size=" w-14 md:w-24"
              src="/images/contact/logo-footer.png"
-            class="space-x-8"
+            class="space-x-8 hover:text-[#ffc107]"
   />
 <p class="text-white text-[17px]  leading-normal pt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viver ra maecenas accumsan lacus vel facilisis.</p>
 

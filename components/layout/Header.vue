@@ -35,7 +35,7 @@
                   preload
                   format="webp"
                   :src="slide"
-                  class="logo-box mx-auto w-3/4 lg:mr-0  xl:w-full object-scale-down"/>
+                  class="logo-box mx-auto w-3/4 lg:mr-0  xl:w-full object-scale-down cursor-grab active:cursor-grabbing"/>
               <div
                   class="hidden absolute overflow-hidden xl:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] xl:bottom-[200px]  xl:right-[120px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover">
                 <article

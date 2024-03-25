@@ -15,7 +15,11 @@ body {
 
 
 }
+html:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open]))
 
+{ overflow-x: clip!important;
+overflow-y: scroll!important; ;
+}
 @layer components {
 
   .button-orange {

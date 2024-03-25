@@ -12,13 +12,14 @@
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from "~/store/userStore";
 import { THEMES, useThemeStore } from '~/store/useTheme'
-
+const themeStore = useThemeStore()
+import {useUserStore} from "~/store/userStore";
 const user = useUserStore()
 
-
-const themeStore = useThemeStore()
-/*await user.getUser()*/
+/*
+onMounted(()=> {
+  user.getToken()
+})*/
 
 </script>
