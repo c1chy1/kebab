@@ -24,11 +24,6 @@ export const useUserStore = defineStore('User', {
                 setToken(message.token)
                 this.isLoggedIn = true
                 this.userInfo = message.user
-                console.log(token)
-
-
-            /*    useRouter().push('/account')*/
-
             }
         },
 
@@ -51,24 +46,6 @@ export const useUserStore = defineStore('User', {
 
         },
 
-        async getToken() {
-            const token = useCookie('token')
-
-        if(token)    this.isLoggedIn = true
-            if (process.client) {
-                return localStorage.getItem('token')
-            }
-        },
-
-        async getUser() {
-            const { success, message } = await getUser()
-            if (success && message)
-                this.userInfo = message.user
-
-            console.log(success)
-            console.log(message)
-        },
-
         async logout() {
             const { success } = await logOutUser({ token: getToken()! })
             if (success) {
@@ -76,7 +53,6 @@ export const useUserStore = defineStore('User', {
                 token.value = ''
                 clearToken()
                 this.isLoggedIn = false
-                useRouter().push('/')
             }
         },
     },
