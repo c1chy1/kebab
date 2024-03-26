@@ -26,7 +26,9 @@ console.log(user.isLoggedIn)
   <LayoutMenu/>
   <LayoutEvents/>
   <LayoutGallery/>
+
   <AccountRegister/>
+
   <AccountLogin v-show="!user.isLoggedIn"/>
   <LayoutFooter/>
 

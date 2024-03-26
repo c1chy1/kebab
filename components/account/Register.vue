@@ -15,7 +15,7 @@ const props = defineProps(
 
 <template>
   <div class="text-center z-20"
-       :class="!user.isLoggedIn ? 'h-auto' : 'h-[35rem]'"
+       :class="!user.isLoggedIn ? 'h-auto' : 'h-auto'"
 
        id="register">
     <h2 class="section-title pt-12">Create Your Account</h2>

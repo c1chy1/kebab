@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: ['@tailwindcss/typography', ['@pinia/nuxt', {
         autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
-    }], /*'@hypernym/nuxt-gsap',*/ '@nuxtjs/tailwindcss', 'nuxt-swiper', '@formkit/nuxt', '@nuxt/image', '@nuxtjs/color-mode', 'nuxt-font-loader', '@nuxt/image-edge'],
+    }],'@nuxtjs/tailwindcss', 'nuxt-swiper', '@formkit/nuxt', '@nuxt/image', '@nuxtjs/color-mode', 'nuxt-font-loader', '@nuxt/image-edge'],
 
 
     build: {
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
     fontLoader: {
 
-        autoImport: true, // enables auto-import feature,
+        autoImport: true,
         local: [
             {
                 src: '/fonts/BebasNeue-Regular.ttf',
