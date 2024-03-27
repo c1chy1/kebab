@@ -5,7 +5,7 @@
     <Swiper
 
         class="md:block h-screen  background-dark transition-all duration-500 w-full"
-
+        :modules="[SwiperAutoplay, SwiperEffectCreative]"
         :slides-per-view="1"
         :loop="true"
         :speed="1000"
