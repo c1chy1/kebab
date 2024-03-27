@@ -1,22 +1,25 @@
 <template>
-  <nav class="lg:hidden z-100">
-    <div @click="toggle()"
-         :class="open ? 'open' : ''"
-         class=" w-6 h-4 sm:w-7 md:w-8 md:h-8 top-8 right-8 absolute"
-         id="hamburger" >
-      <span class="top-1  bg-[#3d2514]"></span>
-      <span class="top-3  bg-[#3d2514]"></span>
-      <span class="top-5  bg-[#3d2514]"></span>
-    </div>
 
-    <div ref="menu" class="  menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
-      <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent" id="bg-menu-mobile">
+  <div
+
+      id="hamburger"
+      @click="toggle()"
+       :class="open ? 'open' : ''"
+       class="lg:hidden  z-[2] w-6 h-4 sm:w-7 md:w-8 md:h-8 top-4 sm:top-5  md:top-8 right-4 2xl:top-8 xl:right-8 absolute"
+  >
+    <span class="top-1  bg-[#3d2514]"></span>
+    <span class="top-3  bg-[#3d2514]"></span>
+    <span class="top-5  bg-[#3d2514]"></span>
+  </div>
+
+    <div ref="menu" class="menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
+      <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent  z-[1]" id="bg-menu-mobile">
 
         <div class="flex py-3 text-primary ">
           <AtomsLogo
               color="Green"
               text-size="text-3xl md:text-4xl"
-              svg-size=" w-14 md:w-16"
+              svg-size="w-14 md:w-16"
               src="/logo.png"
               class="space-x-8"
           />
@@ -37,7 +40,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+
 
 </template>
 
@@ -132,12 +135,6 @@ ul li {
 }
 
 /* hang burger */
-
-#hamburger {
-  cursor: pointer;
-
-  background-color: transparent;
-}
 
 #hamburger:hover span:nth-child(1) {
   -webkit-transition: .20s ease-in-out;

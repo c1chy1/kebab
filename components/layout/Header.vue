@@ -49,7 +49,7 @@
               </div>
             </div>
             <div class=" max-w-full lg:w-1/2 xl:text-left  flex flex-col items-center lg:items-start">
-              <h3 class=" opacity-0 w-full  py-0  sm:py-1  lg:w-auto  px-1  lg:px-4 lg:py-2 mb-4  text-[14px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] ">
+              <h3 class=" opacity-0 w-full  py-0  sm:py-1  lg:w-auto  px-2  lg:px-3 lg:py-2 mb-4  text-[14px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] ">
                 It is a good time for the great taste of kebabs
               </h3>
               <h1 class="opacity-0 mt-4  text-[38px]  lg:text-[48px] xl:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500">
