@@ -38,8 +38,7 @@ bg-repeat-round  px-4  xl:px-16  font-bebas">
 
     </nav>
 
-    <div  ref="navbar" class="nav-bg w-full h-16 sm:h-24 lg:h-36 bg-[url('/bg.png')] opacity-0 filter-dark absolute">
-
+    <div  ref="navbar" class=" duration-500 transition-all nav-bg w-full h-16 sm:h-24 lg:h-36 bg-[url('/bg.png')]  opacity-0 filter-dark fixed">
       <LayoutMobilNav />
     </div>
   </header>
@@ -60,17 +59,13 @@ const menu = ref()
 const image = ref()
 const scrollToTop = ref()
 
-const test = ref()
-
 
 onMounted(()=> {
 
-  console.log(test)
+
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(navbar.value, {
-    opacity : 0,
-  })
+
   gsap.to(scrollToTop.value, {
     opacity : 0,
     xPercent: 200,
