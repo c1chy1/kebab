@@ -5,7 +5,7 @@
       id="hamburger"
       @click="toggle()"
        :class="open ? 'open' : ''"
-       class="lg:hidden  z-[2] w-6 h-4 sm:w-7 md:w-8 md:h-8 top-4 sm:top-5  md:top-8 right-4 2xl:top-8 xl:right-8 absolute"
+       class="lg:hidden  z-[2] w-6 h-4 sm:w-7 md:w-8 md:h-8 top-4 sm:top-5  lg:top-8 right-4 2xl:top-8 xl:right-8 absolute"
   >
     <span class="top-1  bg-[#3d2514]"></span>
     <span class="top-3  bg-[#3d2514]"></span>
