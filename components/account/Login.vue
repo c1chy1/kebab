@@ -10,15 +10,15 @@ const user = useUserStore()
 
   <div
       class="relative w-full mx-auto flex flex-col items-center justify-center pt-28  lg:pt-32 pb-16
-       z-20">
+      ">
 
     <div class="bg-[url('/images/register/register-left.png')]
 bg-no-repeat bg-contain overflow-hidden bg-left-top h-sc -left-12 md:-left-16 lg:-left-20 xl:-left-24 w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 max-w-128 h-full absolute">
     </div>
 
-    <div class="text-center z-20" >
+    <div class="text-center " >
       <h2 class="section-title">Log in</h2>
-      <button v-if="!user.isLoggedIn" class="button-orange z-20 transition-all"
+      <button v-if="!user.isLoggedIn" class="button-orange  transition-all"
               onclick="login_modal.showModal()">
         Log In
       </button>

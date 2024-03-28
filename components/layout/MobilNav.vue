@@ -5,15 +5,15 @@
       id="hamburger"
       @click="toggle()"
        :class="open ? 'open' : ''"
-       class="lg:hidden  z-[2] w-6 h-4 sm:w-7 md:w-8 md:h-8 top-4 sm:top-5  lg:top-8 right-4 2xl:top-8 xl:right-8 absolute"
+       class=" lg:hidden  w-6 h-4 sm:w-7 md:w-8 md:h-8 top-4 sm:top-5  lg:top-8 right-4 2xl:top-8 xl:right-8 absolute"
   >
     <span class="top-1  bg-[#3d2514]"></span>
     <span class="top-3  bg-[#3d2514]"></span>
     <span class="top-5  bg-[#3d2514]"></span>
   </div>
 
-    <div ref="menu" class="menu-mobile right-0 top-0 cursor-pointer font-mont" id="menu-mobile">
-      <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent  z-[1]" id="bg-menu-mobile">
+    <div ref="menu" class="menu-mobile right-0 top-0 cursor-pointer font-mont " id="menu-mobile">
+      <div ref="bgMenu" class=" h-screen px-4 bg-menu-mobile bg-accent " id="bg-menu-mobile">
 
         <div class="flex py-3 text-primary ">
           <AtomsLogo
@@ -110,12 +110,16 @@ function toggle() {
 
 <style scoped>
 
+#hamburger{
 
+  z-index: 60;
+}
 
 #bg-menu-mobile {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 40;
   right: -100%;
   will-change: transform;
 }

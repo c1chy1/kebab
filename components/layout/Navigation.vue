@@ -1,9 +1,9 @@
 
 <template>
-  <header class="z-50 w-full fixed" >
-    <nav ref="navbar" class="navbar  w-full fixed z-[1]
-bg-repeat-round  px-4  xl:px-16  font-bebas">
-      <div class="navbar-start  flex-row py-4  w-full md:w-1/2 lg:w-1/4">
+  <header class=" w-full fixed z-10" >
+    <nav ref="navbar" class="navbar  w-full fixed
+bg-repeat-round  px-4  xl:px-16  font-bebas z-10 ">
+      <div class="navbar-start flex-row py-4  w-full md:w-1/2 lg:w-1/4">
         <AtomsLogo
             color="Green"
             label="Burger House"
@@ -11,11 +11,11 @@ bg-repeat-round  px-4  xl:px-16  font-bebas">
             svg-size=" w-10 lg:w-12 xl:w-16"
             src="/logo.png"
             format="webp"
-            class="space-x-4 z-9999"
+            class="space-x-4"
         />
       </div>
       <div class="navbar-end lg:flex items-end flex-col  text-primary  w-3/4">
-        <div class="hidden sm:flex items-center sm:pr-16 space-x-5 lg:pt-6 lg:pr-9 ">
+        <div class="hidden sm:flex items-center pr-20 space-x-5 lg:pt-6 lg:pr-9 ">
           <img class="animate-shake delay-500" src="/delivery-icon.png" >
           <h2 class=" text-sm lg:text-base text-center font-semibold font-mont py-5 tracking-wider transition-all duration-500"  >
             Call for Delivery +4 450 68 7474</h2>
@@ -38,7 +38,7 @@ bg-repeat-round  px-4  xl:px-16  font-bebas">
 
     </nav>
 
-    <div  ref="mobilNav" class=" duration-1000 transition-all w-full h-16  lg:h-36 bg-[url('/bg.png')]  filter-dark fixed">
+    <div  ref="mobilNav" class=" opacity-0 nav-bg w-full h-16 sm:h-24 lg:h-36 bg-[url('/bg.png')]  duration-1000 xl:duration-750 transition-all filter-dark absolute">
       <LayoutMobilNav />
     </div>
   </header>

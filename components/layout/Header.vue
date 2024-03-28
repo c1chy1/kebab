@@ -1,10 +1,10 @@
 <template>
   <section id="header" class="flex bg-[url('/bg.png')]
-   bg-no-repeat bg-center bg-cover h-screen z-1">
+   bg-no-repeat bg-center bg-cover h-screen ">
 
     <Swiper
 
-        class="md:block h-screen  background-dark transition-all duration-500 w-full"
+        class="md:block h-screen  background-dark transition-all duration-500 w-full "
         :modules="[SwiperAutoplay, SwiperEffectCreative]"
         :slides-per-view="1"
         :loop="true"
@@ -73,13 +73,6 @@ const kebabs = reactive([
 ])
 
 onMounted(()=> {
-
- /* gsap.to("#header h1", {
-    duration: 1.5,
-    x: 100,
-  });*/
-
-
 
   gsap.fromTo(
       "#header h1",
