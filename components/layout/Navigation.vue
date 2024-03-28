@@ -14,7 +14,7 @@ bg-repeat-round  px-4  xl:px-16  font-bebas z-10 ">
             class="space-x-4"
         />
       </div>
-      <div class="navbar-end lg:flex items-end flex-col  text-primary  w-3/4">
+      <div class="navbar-end lg:flex items-end flex-col  text-primary  w-full">
         <div class="hidden sm:flex items-center pr-20 space-x-5 lg:pt-6 lg:pr-9 ">
           <img class="animate-shake delay-500" src="/delivery-icon.png" >
           <h2 class=" text-sm lg:text-base text-center font-semibold font-mont py-5 tracking-wider transition-all duration-500"  >
@@ -38,7 +38,7 @@ bg-repeat-round  px-4  xl:px-16  font-bebas z-10 ">
 
     </nav>
 
-    <div  ref="mobilNav" class=" opacity-0 nav-bg w-full h-16 sm:h-24 lg:h-36 bg-[url('/bg.png')]  duration-1000 xl:duration-750 transition-all filter-dark absolute">
+    <div  ref="mobilNav" class=" opacity-0 nav-bg w-full h-16  lg:h-36 bg-[url('/bg.png')]  duration-1000 xl:duration-750 transition-all filter-dark absolute">
       <LayoutMobilNav />
     </div>
   </header>
