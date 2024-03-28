@@ -1,5 +1,5 @@
 <template>
-  <section id="header" class="flex bg-[url('/bg.png')]
+  <section id="header" class="flex lg:px-12 xl:px-16 bg-[url('/bg.png')]
    bg-no-repeat bg-center bg-cover h-screen ">
 
     <Swiper
@@ -25,19 +25,19 @@
     }"
     >
       <SwiperSlide v-for="slide in kebabs" :key="slide"
-                   class="hero px-4"
+                   class="hero"
       >
         <div v-if="slide">
           <div
               class="h-screen relative flex flex-col sm:flex-row items-center justify-center
                text-center lg:text-left lg:justify-center lg:flex-row-reverse uppercase "
           >
-            <div>
+            <div class="sm:w-1/2 xl:w-full">
               <nuxt-img
                   preload
                   format="webp"
                   :src="slide"
-                  class="logo-box mx-auto w-3/4 sm:w-full  lg:mr-0  xl:w-full object-scale-down cursor-grab active:cursor-grabbing opacity-0 "/>
+                  class="logo-box mx-auto w-3/4 sm:w-full  lg:mr-0  xl:w-11/12 cursor-grab active:cursor-grabbing opacity-0 "/>
               <div
                   id="banner"
                   class="hidden absolute overflow-hidden xl:flex items-center h-[104px] w-[104px] min-w-[104px]   md:h-[160px] md:min-w-[160px] xl:bottom-[200px]  xl:right-[120px]  p-2 md:p-2.5  bg-[#ff6d00] rounded-full  object-cover  opacity-0 ">
@@ -48,13 +48,13 @@
 
               </div>
             </div>
-            <div class=" max-w-full lg:w-1/2 xl:text-left  flex flex-col items-center lg:items-start">
-              <h3 class=" w-full  py-0  sm:py-1  lg:w-auto  px-2  lg:px-3 lg:py-2 mb-4  text-[12px] lg:text-[16px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] opacity-0 ">
+            <div class=" max-w-full sm:w-1/2 xl:w-full xl:text-left  flex flex-col items-center lg:items-start">
+              <h3 class="py-0 md:py-0 lg:py-2 lg:px-3  px-2   mb-4  text-[16px] md:text-[16px] lg:text-[20px]  xl:text-[24px] text-primary border-primary font-medium font-bebas border-dashed border-2 inline-block rounded-[3px] opacity-0 ">
                 It is a good time for the great taste of kebabs
               </h3>
-              <h1 class=" lg:mt-4  text-[38px]  lg:text-[48px] xl:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500 opacity-0 ">
+              <h1 class=" lg:mt-4  text-[38px]   md:text-[44px] lg:text-[64px] xl:text-[94px] text-primary  font-alfa font-medium flex flex-col leading-none tracking-wider  drop-shadow-[4px_5px_#fee7ba] whitespace-pre-line overflow-hidden truncate text-ellipsis  transition-all duration-500 opacity-0 ">
                 Turkish
-                <span class="text-[28px] md:text-[46px] pt-4">Kebab</span>
+                <span class="text-[28px] md:text-[32px] xl:text-[56px] pt-4">Kebab</span>
               </h1>
             </div>
           </div>
