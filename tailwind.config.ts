@@ -9,6 +9,13 @@ module.exports = {
     ],
 
     theme: {
+        screens: {
+            sm: "576px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+        },
         extend: {
             boxShadow: {
                 'xl': '18px 24px 43px 0 rgba(0, 0, 0, .17)',
